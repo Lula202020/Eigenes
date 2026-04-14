@@ -1,1 +1,3 @@
-Flask-Test/instance/
+Flask-Test/instance/command_log.jsonl
+Flask-Test/instance/launcher_config.json
+Flask-Test/instance/launcher_state.json

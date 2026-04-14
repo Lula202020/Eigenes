@@ -1,7 +1,7 @@
 {
-  "race_ini_path": "C:\\src\\BIZ\\Asetto Corsa\\Workplace\\Eigenes\\Flask-Test\\templates\\race.ini",
-  "tracks_root": "C:\\src\\BIZ\\Asetto Corsa\\GameFiles\\tracks",
-  "cars_root": "C:\\src\\BIZ\\Asetto Corsa\\GameFiles\\cars",
+  "race_ini_path": "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\cfg\\race.ini",
+  "tracks_root": "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\content\\tracks",
+  "cars_root": "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\content\\cars",
   "game_executable": "",
   "game_args": [],
   "track_count": 31,
@@ -2921,8 +2921,8 @@
       "preview_url": "/assets/cars/wec_lmp1_audi_r10_tdi_2008/skins/1/preview.jpg"
     }
   ],
-  "selected_track_id": "ks_black_cat_county",
-  "selected_layout_id": "layout_int",
+  "selected_track_id": "drift",
+  "selected_layout_id": "",
   "selected_car": "al_rs6_avant_widebody",
   "selected_car_entry": {
     "car_id": "al_rs6_avant_widebody",
@@ -2932,22 +2932,24 @@
     "preview_url": "/assets/cars/al_rs6_avant_widebody/skins/Chameleon%20Brown/preview.jpg"
   },
   "selected_track": {
-    "track_id": "ks_black_cat_county",
-    "folder_name": "ks_black_cat_county",
-    "name": "Black Cat County",
-    "description": "Fictional U.S.A. Road",
+    "track_id": "drift",
+    "folder_name": "drift",
+    "name": "Drift",
+    "description": "Drift Track",
     "tags": [
-      "circuit",
+      "#drift",
       "drift",
+      "test track",
+      "circuit",
       "original",
-      "usa"
+      "Japan"
     ],
-    "country": "U.S.A.",
-    "city": "Los Angeles",
-    "length": "6478",
+    "country": "Japan",
+    "city": "Tokyo",
+    "length": "905",
     "width": "15",
-    "pitboxes": "24",
-    "run": "anti-clockwise",
+    "pitboxes": "18",
+    "run": "DRIFT",
     "author": "",
     "version": "",
     "year": "",
@@ -2955,27 +2957,29 @@
       "lat",
       "lon"
     ],
-    "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/preview.png",
-    "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/outline.png",
+    "preview_url": "/assets/tracks/drift/ui/preview.png",
+    "map_url": "/assets/tracks/drift/map.png",
     "layouts": [
       {
-        "layout_id": "layout_int",
-        "config_track": "layout_int",
-        "folder_name": "layout_int",
-        "name": "Black Cat County",
-        "description": "Fictional U.S.A. Road",
+        "layout_id": "default",
+        "config_track": "",
+        "folder_name": "drift",
+        "name": "Drift",
+        "description": "Drift Track",
         "tags": [
-          "circuit",
+          "#drift",
           "drift",
+          "test track",
+          "circuit",
           "original",
-          "usa"
+          "Japan"
         ],
-        "country": "U.S.A.",
-        "city": "Los Angeles",
-        "length": "6478",
+        "country": "Japan",
+        "city": "Tokyo",
+        "length": "905",
         "width": "15",
-        "pitboxes": "24",
-        "run": "anti-clockwise",
+        "pitboxes": "18",
+        "run": "DRIFT",
         "author": "",
         "version": "",
         "year": "",
@@ -2983,93 +2987,35 @@
           "lat",
           "lon"
         ],
-        "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/preview.png",
-        "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/outline.png",
-        "is_default_layout": false,
-        "is_multi_layout": true
-      },
-      {
-        "layout_id": "layout_long",
-        "config_track": "layout_long",
-        "folder_name": "layout_long",
-        "name": "Black Cat County - Long",
-        "description": "Fictional U.S.A. Road",
-        "tags": [
-          "circuit",
-          "drift",
-          "original",
-          "usa"
-        ],
-        "country": "U.S.A.",
-        "city": "Los Angeles",
-        "length": "11244",
-        "width": "15",
-        "pitboxes": "24",
-        "run": "anti-clockwise",
-        "author": "",
-        "version": "",
-        "year": "",
-        "geotags": [
-          "lat",
-          "lon"
-        ],
-        "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_long/preview.png",
-        "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_long/outline.png",
-        "is_default_layout": false,
-        "is_multi_layout": true
-      },
-      {
-        "layout_id": "layout_short",
-        "config_track": "layout_short",
-        "folder_name": "layout_short",
-        "name": "Black Cat County - Short",
-        "description": "Fictional U.S.A. Road",
-        "tags": [
-          "circuit",
-          "drift",
-          "original",
-          "usa"
-        ],
-        "country": "U.S.A.",
-        "city": "Los Angeles",
-        "length": "6542",
-        "width": "15",
-        "pitboxes": "24",
-        "run": "anti-clockwise",
-        "author": "",
-        "version": "",
-        "year": "",
-        "geotags": [
-          "lat",
-          "lon"
-        ],
-        "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_short/preview.png",
-        "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_short/outline.png",
-        "is_default_layout": false,
-        "is_multi_layout": true
+        "preview_url": "/assets/tracks/drift/ui/preview.png",
+        "map_url": "/assets/tracks/drift/map.png",
+        "is_default_layout": true,
+        "is_multi_layout": false
       }
     ],
-    "layout_count": 3,
-    "multi_layout": true
+    "layout_count": 1,
+    "multi_layout": false
   },
   "selected_layout": {
-    "layout_id": "layout_int",
-    "config_track": "layout_int",
-    "folder_name": "layout_int",
-    "name": "Black Cat County",
-    "description": "Fictional U.S.A. Road",
+    "layout_id": "default",
+    "config_track": "",
+    "folder_name": "drift",
+    "name": "Drift",
+    "description": "Drift Track",
     "tags": [
-      "circuit",
+      "#drift",
       "drift",
+      "test track",
+      "circuit",
       "original",
-      "usa"
+      "Japan"
     ],
-    "country": "U.S.A.",
-    "city": "Los Angeles",
-    "length": "6478",
+    "country": "Japan",
+    "city": "Tokyo",
+    "length": "905",
     "width": "15",
-    "pitboxes": "24",
-    "run": "anti-clockwise",
+    "pitboxes": "18",
+    "run": "DRIFT",
     "author": "",
     "version": "",
     "year": "",
@@ -3077,57 +3023,37 @@
       "lat",
       "lon"
     ],
-    "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/preview.png",
-    "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/outline.png",
-    "is_default_layout": false,
-    "is_multi_layout": true
+    "preview_url": "/assets/tracks/drift/ui/preview.png",
+    "map_url": "/assets/tracks/drift/map.png",
+    "is_default_layout": true,
+    "is_multi_layout": false
   },
   "active_game_pid": "",
   "message": "",
   "message_kind": "info",
   "recent_commands": [
     {
-      "timestamp": "2026-04-13T09:27:16+00:00",
+      "timestamp": "2026-04-14T06:17:44+00:00",
       "action": "launch",
       "details": {
         "track_id": "drift",
         "layout_id": "default",
         "car_id": "al_rs6_avant_widebody",
-        "success": false,
-        "message": "No game executable configured. Set ASSETTO_EXECUTABLE or launcher_config.json."
+        "success": true,
+        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
       }
     },
     {
-      "timestamp": "2026-04-13T09:28:33+00:00",
-      "action": "launch",
+      "timestamp": "2026-04-14T06:18:03+00:00",
+      "action": "stop_game",
       "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "car_id": "al_rs6_avant_widebody",
-        "success": false,
-        "message": "No game executable configured. Set ASSETTO_EXECUTABLE or launcher_config.json."
+        "mode": "taskkill",
+        "result": 0,
+        "active": {}
       }
     },
     {
-      "timestamp": "2026-04-13T09:28:41+00:00",
-      "action": "control",
-      "details": {
-        "action": "shift_up"
-      }
-    },
-    {
-      "timestamp": "2026-04-13T09:28:41+00:00",
-      "action": "launch",
-      "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "car_id": "al_rs6_avant_widebody",
-        "success": false,
-        "message": "No game executable configured. Set ASSETTO_EXECUTABLE or launcher_config.json."
-      }
-    },
-    {
-      "timestamp": "2026-04-13T09:35:01+00:00",
+      "timestamp": "2026-04-14T06:19:45+00:00",
       "action": "select_layout",
       "details": {
         "track_id": "drift",
@@ -3138,7 +3064,27 @@
       }
     },
     {
-      "timestamp": "2026-04-13T09:35:14+00:00",
+      "timestamp": "2026-04-14T06:20:28+00:00",
+      "action": "launch",
+      "details": {
+        "track_id": "drift",
+        "layout_id": "default",
+        "car_id": "al_rs6_avant_widebody",
+        "success": true,
+        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
+      }
+    },
+    {
+      "timestamp": "2026-04-14T06:20:59+00:00",
+      "action": "stop_game",
+      "details": {
+        "mode": "taskkill",
+        "result": 128,
+        "active": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-14T06:21:25+00:00",
       "action": "select_layout",
       "details": {
         "track_id": "drift",
@@ -3149,69 +3095,62 @@
       }
     },
     {
-      "timestamp": "2026-04-13T09:35:19+00:00",
+      "timestamp": "2026-04-14T06:21:34+00:00",
       "action": "launch",
       "details": {
         "track_id": "drift",
         "layout_id": "default",
         "car_id": "al_rs6_avant_widebody",
-        "success": false,
-        "message": "No game executable configured. Set ASSETTO_EXECUTABLE or launcher_config.json."
+        "success": true,
+        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
       }
     },
     {
-      "timestamp": "2026-04-13T09:38:43+00:00",
+      "timestamp": "2026-04-14T06:21:39+00:00",
+      "action": "stop_game",
+      "details": {
+        "mode": "taskkill",
+        "result": 0,
+        "active": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-14T06:22:32+00:00",
+      "action": "stop_game",
+      "details": {
+        "mode": "taskkill",
+        "result": 128,
+        "active": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-14T06:23:22+00:00",
       "action": "select_layout",
       "details": {
-        "track_id": "ks_brands_hatch",
-        "layout_id": "gp",
-        "layout_config": "gp",
-        "track_name": "Brands Hatch - GP",
-        "layout_name": "Brands Hatch - GP"
+        "track_id": "drift",
+        "layout_id": "default",
+        "layout_config": "",
+        "track_name": "Drift",
+        "layout_name": "Drift"
       }
     },
     {
-      "timestamp": "2026-04-13T09:38:51+00:00",
+      "timestamp": "2026-04-14T06:23:24+00:00",
       "action": "launch",
       "details": {
-        "track_id": "ks_brands_hatch",
-        "layout_id": "gp",
+        "track_id": "drift",
+        "layout_id": "default",
         "car_id": "al_rs6_avant_widebody",
-        "success": false,
-        "message": "No game executable configured. Set ASSETTO_EXECUTABLE or launcher_config.json."
+        "success": true,
+        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
       }
     },
     {
-      "timestamp": "2026-04-14T05:05:47+00:00",
-      "action": "select_layout",
+      "timestamp": "2026-04-14T06:23:28+00:00",
+      "action": "stop_game",
       "details": {
-        "track_id": "ks_black_cat_county",
-        "layout_id": "layout_int",
-        "layout_config": "layout_int",
-        "track_name": "Black Cat County",
-        "layout_name": "Black Cat County"
-      }
-    },
-    {
-      "timestamp": "2026-04-14T05:05:51+00:00",
-      "action": "launch",
-      "details": {
-        "track_id": "ks_black_cat_county",
-        "layout_id": "layout_int",
-        "car_id": "al_rs6_avant_widebody",
-        "success": false,
-        "message": "No game executable configured. Set ASSETTO_EXECUTABLE or launcher_config.json."
-      }
-    },
-    {
-      "timestamp": "2026-04-14T05:11:08+00:00",
-      "action": "launch",
-      "details": {
-        "track_id": "ks_black_cat_county",
-        "layout_id": "layout_int",
-        "car_id": "al_rs6_avant_widebody",
-        "success": false,
-        "message": "No game executable configured. Set ASSETTO_EXECUTABLE or launcher_config.json."
+        "mode": "pm2",
+        "result": 0
       }
     }
   ]

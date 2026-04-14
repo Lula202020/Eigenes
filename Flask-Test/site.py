@@ -132,7 +132,7 @@ def clear_active_game_process() -> None:
 
 def pm2_game_is_available() -> bool:
     try:
-        result = subprocess.run(
+        result = os.system(
             ["pm2", "describe", "Game"],
             check=False,
             capture_output=True,
@@ -630,7 +630,7 @@ def launch_game(settings: LauncherSettings) -> tuple[bool, str]:
         command = "pm2 start Game"
         launch_message = "Game launch command sent: pm2 start Game"
     else:
-        command = 'pm2 start "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"'
+        command = 'cd "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19" && pm2 start acs_pro.exe --name Game'
         launch_message = 'Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe'
 
     try:
@@ -794,14 +794,10 @@ def start_game():
 def stop_game():
     active_game = read_active_game_process()
 
-    if pm2_game_is_available():
-        exit_code = os.system("pm2 stop Game")
-        clear_active_game_process()
-        append_command_log("stop_game", {"mode": "pm2", "result": exit_code})
-    else:
-        exit_code = os.system('taskkill /IM acs_pro.exe /T /F')
-        clear_active_game_process()
-        append_command_log("stop_game", {"mode": "taskkill", "result": exit_code, "active": active_game})
+    exit_code = os.system("pm2 stop Game")
+    clear_active_game_process()
+    append_command_log("stop_game", {"mode": "pm2", "result": exit_code})
+
 
     return redirect(url_for("tracks_overview"))
 
