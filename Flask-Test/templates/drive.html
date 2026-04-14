@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Drive Controls{% endblock %}
+
+{% block head %}
+<style>
+    .top-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+
+    .top-actions form {
+        margin: 0;
+    }
+
+    .drive-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 18px;
+    }
+
+    .control-groups {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .control-group {
+        display: grid;
+        gap: 12px;
+    }
+
+    .control-group h3 {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    .control-panel {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .control-panel button {
+        width: 100%;
+        min-height: 98px;
+        font-size: 1.15rem;
+        font-weight: 800;
+    }
+
+    .direction-panel {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .direction-panel .forward {
+        grid-column: 1 / -1;
+        min-height: 114px;
+    }
+
+    .meta-list {
+        display: grid;
+        gap: 10px;
+    }
+
+    .log {
+        margin-top: 12px;
+    }
+
+    @media (max-width: 900px) {
+        .top-actions {
+            justify-content: stretch;
+        }
+
+        .top-actions .button-link,
+        .top-actions button {
+            width: 100%;
+        }
+
+        .drive-grid,
+        .control-groups,
+        .direction-panel {
+            grid-template-columns: 1fr;
+        }
+
+        .direction-panel .forward {
+            min-height: 104px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="top-actions">
+    <form method="post" action="{{ url_for('stop_game') }}">
+        <button type="submit" class="secondary">Exit Game</button>
+    </form>
+    <a class="button-link ghost" href="{{ url_for('tracks_overview') }}">Track selection</a>
+</div>
+
+<section class="hero">
+    <div class="eyebrow">Drive mode</div>
+</section>
+
+<div id="status-banner" class="status {% if message_kind == 'warning' %}warning{% elif message_kind == 'error' %}error{% endif %}">
+    {{ message or 'Ready.' }}
+</div>
+<section class="drive-grid">
+    <article class="card">
+        <h2>Controls</h2>
+        <div class="control-groups">
+            <div class="control-group">
+                <h3>Gear</h3>
+                <div class="control-panel">
+                    <button type="button" onclick="sendControl('shift_up')">Shift Up</button>
+                    <button type="button" onclick="sendControl('shift_down')">Shift Down</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Direction</h3>
+                <div class="direction-panel">
+                    <button type="button" class="forward" onclick="sendControl('forward')">Forward</button>
+                    <button type="button" class="secondary" onclick="sendControl('neutral')">Neutral</button>
+                    <button type="button" class="secondary" onclick="sendControl('reverse')">Reverse</button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+</section>
+{% endblock %}

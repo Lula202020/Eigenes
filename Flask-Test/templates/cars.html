@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block title %}Select Car{% endblock %}
+
+{% block head %}
+<style>
+    .top-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    .top-actions form {
+        margin: 0;
+    }
+
+    .car-shell {
+        margin-top: 18px;
+    }
+
+    .car-track {
+        padding-bottom: 24px;
+    }
+
+    .car-card {
+        width: min(88vw, 520px);
+        display: grid;
+        gap: 14px;
+    }
+
+    .car-media {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .car-preview {
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        background: rgba(2, 7, 16, 0.72);
+        height: clamp(200px, 30vw, 300px);
+    }
+
+    .car-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        background: rgba(2, 7, 16, 0.72);
+    }
+
+    .car-preview.placeholder {
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        text-align: center;
+        padding: 20px;
+    }
+
+    .brand-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .brand-logo {
+        width: 74px;
+        height: 74px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(2, 7, 16, 0.72);
+        overflow: hidden;
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+    }
+
+    .brand-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .brand-logo.placeholder {
+        color: var(--muted);
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .car-name {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    @media (max-width: 780px) {
+        .top-actions {
+            justify-content: stretch;
+        }
+
+        .top-actions form,
+        .top-actions .button-link {
+            width: 100%;
+        }
+
+        .top-actions button,
+        .top-actions .button-link {
+            width: 100%;
+        }
+
+        .car-card {
+            width: min(90vw, 460px);
+        }
+
+        .car-preview {
+            height: clamp(180px, 52vw, 280px);
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+{% if selected_car_entry %}
+<div class="top-actions">
+    <form method="post" action="{{ url_for('start_game') }}">
+        <button type="submit">Start Game</button>
+    </form>
+</div>
+{% endif %}
+
+<section class="hero">
+    <div class="eyebrow">Car selection</div>
+</section>
+
+{% if message %}
+<div class="status {% if message_kind == 'warning' %}warning{% elif message_kind == 'error' %}error{% endif %}">
+    {{ message }}
+</div>
+{% endif %}
+
+<section class="card" style="margin-top: 18px;">
+    <h2>Current selection</h2>
+    <div class="pill-row">
+        <span class="pill">Track: {{ selected_track.name if selected_track else 'not selected' }}</span>
+        <span class="pill">Layout: {{ selected_layout.name if selected_layout else 'not selected' }}</span>
+        <span class="pill">Car: {{ selected_car_entry.name if selected_car_entry else 'not selected' }}</span>
+    </div>
+    <div class="buttons" style="margin-top: 12px;">
+        <a class="button-link ghost" href="{{ url_for('tracks_overview') }}">Back to tracks</a>
+        {% if selected_track %}
+        <a class="button-link secondary" href="{{ url_for('track_detail', track_id=selected_track.track_id) }}">Back to layouts</a>
+        {% endif %}
+    </div>
+</section>
+
+<section class="carousel-shell car-shell">
+    <div class="carousel-track car-track">
+        {% for car in cars %}
+        <article class="card car-card carousel-item">
+            <div class="car-media">
+                <div class="car-preview {% if not car.preview_url %}placeholder{% endif %}">
+                    {% if car.preview_url %}
+                    <img src="{{ car.preview_url }}" alt="{{ car.name }} preview">
+                    {% else %}
+                    <span>No preview.jpg found in skins.</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="brand-row">
+                <div class="brand-logo {% if not car.logo_url %}placeholder{% endif %}">
+                    {% if car.logo_url %}
+                    <img src="{{ car.logo_url }}" alt="{{ car.name }} brand logo">
+                    {% else %}
+                    <span>No logo.png</span>
+                    {% endif %}
+                </div>
+                <div>
+                    <p class="car-name">{{ car.name }}</p>
+                    <div class="pill-row">
+                        <span class="pill">{{ car.folder_name }}</span>
+                        {% if selected_car == car.car_id %}
+                        <span class="pill">selected</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <form method="post" action="{{ url_for('select_car', car_id=car.car_id) }}">
+                <div class="buttons">
+                    {% if selected_car == car.car_id %}
+                    <button type="submit" class="secondary">Selected</button>
+                    {% else %}
+                    <button type="submit">Select car</button>
+                    {% endif %}
+                </div>
+            </form>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}Track Browser{% endblock %}
+
+{% block head %}
+<style>
+    .top-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    .catalog-card {
+        display: grid;
+        gap: 14px;
+        height: 100%;
+        width: min(88vw, 440px);
+    }
+
+    .track-link {
+        color: inherit;
+        text-decoration: none;
+        display: grid;
+        gap: 14px;
+        height: 100%;
+    }
+
+    .media {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .frame {
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        background: rgba(2, 7, 16, 0.72);
+        height: clamp(170px, 26vw, 240px);
+    }
+
+    .frame img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        background: rgba(2, 7, 16, 0.72);
+    }
+
+    .frame.placeholder {
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .thumb {
+        height: clamp(165px, 24vw, 220px);
+    }
+
+    .summary {
+        display: grid;
+        gap: 10px;
+    }
+
+    .catalog-shell {
+        margin-top: 18px;
+    }
+
+    .catalog-track {
+        padding-bottom: 24px;
+    }
+
+    .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px 12px;
+        font-size: 0.92rem;
+    }
+
+    .meta-grid span {
+        color: var(--muted);
+    }
+
+    @media (max-width: 780px) {
+        .top-actions {
+            justify-content: stretch;
+        }
+
+        .top-actions .button-link {
+            width: 100%;
+            text-align: center;
+        }
+
+        .media,
+        .meta-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .catalog-card {
+            width: min(90vw, 400px);
+        }
+
+        .frame,
+        .thumb {
+            height: clamp(150px, 46vw, 220px);
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="top-actions">
+    <a class="button-link secondary" href="{{ url_for('settings_page') }}">Settings</a>
+</div>
+
+<section class="hero">
+    <div class="eyebrow">Track selection</div>
+</section>
+
+<div class="status">
+    Tracks: {{ track_count }} | Cars: {{ car_count }}
+</div>
+
+{% if selected_track %}
+<section class="card" style="margin-top: 18px;">
+    <h2>Current selection</h2>
+    <div class="pill-row">
+        <span class="pill">Track: {{ selected_track.name }}</span>
+        <span class="pill">Layout: {{ selected_layout.name if selected_layout else 'not selected' }}</span>
+        <span class="pill">Car: {{ selected_car or 'not selected yet' }}</span>
+    </div>
+</section>
+{% endif %}
+
+<section class="carousel-shell catalog-shell">
+    <div class="carousel-track catalog-track">
+    {% for track in tracks %}
+    <article class="card catalog-card carousel-item">
+        <a class="track-link" href="{{ url_for('track_detail', track_id=track.track_id) }}">
+            <div class="media">
+                <div class="frame thumb {% if not track.preview_url %}placeholder{% endif %}">
+                    {% if track.preview_url %}
+                    <img src="{{ track.preview_url }}" alt="{{ track.name }} preview">
+                    {% else %}
+                    <span>No preview image found.</span>
+                    {% endif %}
+                </div>
+                <div class="frame thumb {% if not track.map_url %}placeholder{% endif %}">
+                    {% if track.map_url %}
+                    <img src="{{ track.map_url }}" alt="{{ track.name }} map">
+                    {% else %}
+                    <span>No map image found.</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="summary">
+                <div class="pill-row">
+                    <span class="pill">{{ track.folder_name }}</span>
+                    <span class="pill">{{ track.layout_count }} layout{% if track.layout_count != 1 %}s{% endif %}</span>
+                    <span class="pill">{% if track.multi_layout %}multi-layout{% else %}single-layout{% endif %}</span>
+                </div>
+                <h2>{{ track.name }}</h2>
+                <p>{{ track.description or 'No description available.' }}</p>
+                <div class="meta-grid">
+                    <span>Country</span><strong>{{ track.country or 'Unknown' }}</strong>
+                    <span>City</span><strong>{{ track.city or 'Unknown' }}</strong>
+                    <span>Length</span><strong>{{ track.length or 'n/a' }}</strong>
+                    <span>Pit boxes</span><strong>{{ track.pitboxes or 'n/a' }}</strong>
+                </div>
+            </div>
+        </a>
+    </article>
+    {% endfor %}
+</div>
+</section>
+{% endblock %}
