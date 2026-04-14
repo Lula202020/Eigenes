@@ -130,6 +130,20 @@ def clear_active_game_process() -> None:
         ACTIVE_GAME_FILE.unlink()
 
 
+def pm2_game_is_available() -> bool:
+    try:
+        result = subprocess.run(
+            ["pm2", "describe", "Game"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+    except Exception:
+        return False
+
+    return result.returncode == 0
+
+
 def settings_template_context(message: str = "", message_kind: str = "info") -> dict:
     settings = load_settings()
     return {
@@ -612,15 +626,24 @@ def update_race_ini_values(path: Path, track: str, car: str) -> None:
 
 
 def launch_game(settings: LauncherSettings) -> tuple[bool, str]:
-    command = ["pm2", "run", "Game"]
+    if pm2_game_is_available():
+        command = "pm2 start Game"
+        launch_message = "Game launch command sent: pm2 start Game"
+    else:
+        command = 'pm2 start "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"'
+        launch_message = 'Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe'
 
     try:
-        process = subprocess.Popen(command, cwd=str(BASE_DIR))
-        save_active_game_process(process.pid)
+        exit_code = os.system(command)
     except Exception as exc:  # pragma: no cover - surfaced to the UI instead
         return False, f"Failed to launch game: {exc}"
 
-    return True, "Game launch command sent: pm2 run Game"
+    if exit_code != 0:
+        return False, f"Failed to launch game: {command} (exit code {exit_code})"
+
+    clear_active_game_process()
+
+    return True, launch_message
 
 
 def load_dashboard_context(message: str | None = None, message_kind: str = "info") -> dict:
@@ -769,19 +792,16 @@ def start_game():
 
 @app.post("/stop-game")
 def stop_game():
-    context = build_browser_context()
     active_game = read_active_game_process()
 
-    if active_game.get("pid"):
-        pid = str(active_game.get("pid"))
-        try:
-            subprocess.run(["taskkill", "/PID", pid, "/T", "/F"], check=False, capture_output=True, text=True)
-            clear_active_game_process()
-            append_command_log("stop_game", {"pid": pid, "result": "terminated"})
-        except Exception as exc:  # pragma: no cover - surfaced to UI
-            append_command_log("stop_game", {"pid": pid, "result": f"error: {exc}"})
+    if pm2_game_is_available():
+        exit_code = os.system("pm2 stop Game")
+        clear_active_game_process()
+        append_command_log("stop_game", {"mode": "pm2", "result": exit_code})
     else:
-        append_command_log("stop_game", {"result": "no_active_process"})
+        exit_code = os.system('taskkill /IM acs_pro.exe /T /F')
+        clear_active_game_process()
+        append_command_log("stop_game", {"mode": "taskkill", "result": exit_code, "active": active_game})
 
     return redirect(url_for("tracks_overview"))
 
