@@ -317,57 +317,60 @@
       "car_id": "800hp_rs2",
       "folder_name": "800hp_rs2",
       "name": "800hp rs2",
-      "logo_url": "/assets/cars/800hp_rs2/logo.png",
+      "logo_url": "/assets/cars/800hp_rs2/ui/badge.png",
       "preview_url": "/assets/cars/800hp_rs2/skins/Amethyst_Grey/preview.jpg"
     },
     {
       "car_id": "al_rs6_avant_widebody",
       "folder_name": "al_rs6_avant_widebody",
       "name": "al rs6 avant widebody",
-      "logo_url": "/assets/cars/al_rs6_avant_widebody/logo.png",
+      "logo_url": "/assets/cars/al_rs6_avant_widebody/ui/badge.png",
       "preview_url": "/assets/cars/al_rs6_avant_widebody/skins/Chameleon%20Brown/preview.jpg"
     },
     {
       "car_id": "audi_90_gto",
       "folder_name": "audi_90_gto",
       "name": "audi 90 gto",
-      "logo_url": "/assets/cars/audi_90_gto/logo.png",
+      "logo_url": "/assets/cars/audi_90_gto/ui/badge.png",
       "preview_url": "/assets/cars/audi_90_gto/skins/fairy/preview.jpg"
     },
     {
       "car_id": "audi_90_gto_s1",
       "folder_name": "audi_90_gto_s1",
       "name": "audi 90 gto s1",
-      "logo_url": "/assets/cars/audi_90_gto_s1/logo.png",
+      "logo_url": "/assets/cars/audi_90_gto_s1/ui/badge.png",
       "preview_url": "/assets/cars/audi_90_gto_s1/skins/fairy/preview.jpg"
     }
   ],
-  "selected_track_id": "greatbritain",
+  "selected_track_id": "drift",
   "selected_layout_id": "",
   "selected_car": "800hp_rs2",
   "selected_car_entry": {
     "car_id": "800hp_rs2",
     "folder_name": "800hp_rs2",
     "name": "800hp rs2",
-    "logo_url": "/assets/cars/800hp_rs2/logo.png",
+    "logo_url": "/assets/cars/800hp_rs2/ui/badge.png",
     "preview_url": "/assets/cars/800hp_rs2/skins/Amethyst_Grey/preview.jpg"
   },
   "selected_track": {
-    "track_id": "greatbritain",
-    "folder_name": "greatbritain",
-    "name": "Great Britain",
-    "description": "Great Britain",
+    "track_id": "drift",
+    "folder_name": "drift",
+    "name": "Drift",
+    "description": "Drift Track",
     "tags": [
+      "#drift",
+      "drift",
+      "test track",
       "circuit",
       "original",
-      "Great Britain"
+      "Japan"
     ],
-    "country": "Great Britain",
-    "city": "London",
-    "length": "5.901m",
-    "width": "14m",
-    "pitboxes": "24",
-    "run": "clockwise",
+    "country": "Japan",
+    "city": "Tokyo",
+    "length": "905",
+    "width": "15",
+    "pitboxes": "18",
+    "run": "DRIFT",
     "author": "",
     "version": "",
     "year": "",
@@ -375,26 +378,29 @@
       "lat",
       "lon"
     ],
-    "preview_url": "/assets/tracks/greatbritain/ui/preview.png",
-    "map_url": "/assets/tracks/greatbritain/map.png",
+    "preview_url": "/assets/tracks/drift/ui/preview.png",
+    "map_url": "/assets/tracks/drift/map.png",
     "layouts": [
       {
         "layout_id": "default",
         "config_track": "",
-        "folder_name": "greatbritain",
-        "name": "Great Britain",
-        "description": "Great Britain",
+        "folder_name": "drift",
+        "name": "Drift",
+        "description": "Drift Track",
         "tags": [
+          "#drift",
+          "drift",
+          "test track",
           "circuit",
           "original",
-          "Great Britain"
+          "Japan"
         ],
-        "country": "Great Britain",
-        "city": "London",
-        "length": "5.901m",
-        "width": "14m",
-        "pitboxes": "24",
-        "run": "clockwise",
+        "country": "Japan",
+        "city": "Tokyo",
+        "length": "905",
+        "width": "15",
+        "pitboxes": "18",
+        "run": "DRIFT",
         "author": "",
         "version": "",
         "year": "",
@@ -402,8 +408,8 @@
           "lat",
           "lon"
         ],
-        "preview_url": "/assets/tracks/greatbritain/ui/preview.png",
-        "map_url": "/assets/tracks/greatbritain/map.png",
+        "preview_url": "/assets/tracks/drift/ui/preview.png",
+        "map_url": "/assets/tracks/drift/map.png",
         "is_default_layout": true,
         "is_multi_layout": false
       }
@@ -414,20 +420,23 @@
   "selected_layout": {
     "layout_id": "default",
     "config_track": "",
-    "folder_name": "greatbritain",
-    "name": "Great Britain",
-    "description": "Great Britain",
+    "folder_name": "drift",
+    "name": "Drift",
+    "description": "Drift Track",
     "tags": [
+      "#drift",
+      "drift",
+      "test track",
       "circuit",
       "original",
-      "Great Britain"
+      "Japan"
     ],
-    "country": "Great Britain",
-    "city": "London",
-    "length": "5.901m",
-    "width": "14m",
-    "pitboxes": "24",
-    "run": "clockwise",
+    "country": "Japan",
+    "city": "Tokyo",
+    "length": "905",
+    "width": "15",
+    "pitboxes": "18",
+    "run": "DRIFT",
     "author": "",
     "version": "",
     "year": "",
@@ -435,105 +444,15 @@
       "lat",
       "lon"
     ],
-    "preview_url": "/assets/tracks/greatbritain/ui/preview.png",
-    "map_url": "/assets/tracks/greatbritain/map.png",
+    "preview_url": "/assets/tracks/drift/ui/preview.png",
+    "map_url": "/assets/tracks/drift/map.png",
     "is_default_layout": true,
     "is_multi_layout": false
   },
   "active_game_pid": "",
-  "message": "",
-  "message_kind": "info",
+  "message": "Auto ausgew\u00e4hlt: 800hp rs2",
+  "message_kind": "success",
   "recent_commands": [
-    {
-      "timestamp": "2026-04-15T06:50:52+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "al_rs6_avant_widebody",
-        "car_name": "al rs6 avant widebody",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:53+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "800hp_rs2",
-        "car_name": "800hp rs2",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:53+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "al_rs6_avant_widebody",
-        "car_name": "al rs6 avant widebody",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:53+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "800hp_rs2",
-        "car_name": "800hp rs2",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:53+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "al_rs6_avant_widebody",
-        "car_name": "al rs6 avant widebody",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:54+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "800hp_rs2",
-        "car_name": "800hp rs2",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:54+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "al_rs6_avant_widebody",
-        "car_name": "al rs6 avant widebody",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:55+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "800hp_rs2",
-        "car_name": "800hp rs2",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
-    {
-      "timestamp": "2026-04-15T06:50:55+00:00",
-      "action": "select_car",
-      "details": {
-        "car_id": "al_rs6_avant_widebody",
-        "car_name": "al rs6 avant widebody",
-        "track_id": "greatbritain",
-        "layout_id": "default"
-      }
-    },
     {
       "timestamp": "2026-04-15T06:50:55+00:00",
       "action": "select_car",
@@ -561,6 +480,97 @@
         "car_id": "800hp_rs2",
         "car_name": "800hp rs2",
         "track_id": "greatbritain",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:52:18+00:00",
+      "action": "select_layout",
+      "details": {
+        "track_id": "drift",
+        "layout_id": "default",
+        "layout_config": "",
+        "track_name": "Drift",
+        "layout_name": "Drift"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:52:26+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "al_rs6_avant_widebody",
+        "car_name": "al rs6 avant widebody",
+        "track_id": "drift",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:52:27+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "800hp_rs2",
+        "car_name": "800hp rs2",
+        "track_id": "drift",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:57:42+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "al_rs6_avant_widebody",
+        "car_name": "al rs6 avant widebody",
+        "track_id": "drift",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:57:43+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "audi_90_gto",
+        "car_name": "audi 90 gto",
+        "track_id": "drift",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:57:45+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "800hp_rs2",
+        "car_name": "800hp rs2",
+        "track_id": "drift",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:58:38+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "al_rs6_avant_widebody",
+        "car_name": "al rs6 avant widebody",
+        "track_id": "drift",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:58:41+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "audi_90_gto",
+        "car_name": "audi 90 gto",
+        "track_id": "drift",
+        "layout_id": "default"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T10:58:42+00:00",
+      "action": "select_car",
+      "details": {
+        "car_id": "800hp_rs2",
+        "car_name": "800hp rs2",
+        "track_id": "drift",
         "layout_id": "default"
       }
     }

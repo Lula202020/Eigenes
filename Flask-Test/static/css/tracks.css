@@ -28,9 +28,9 @@
 
 .frame {
     border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(31, 56, 92, 0.16);
     overflow: hidden;
-    background: rgba(2, 7, 16, 0.72);
+    background: rgba(236, 243, 250, 0.92);
     height: clamp(170px, 26vw, 240px);
 }
 
@@ -39,7 +39,7 @@
     height: 100%;
     display: block;
     object-fit: contain;
-    background: rgba(2, 7, 16, 0.72);
+    background: rgba(236, 243, 250, 0.92);
 }
 
 .frame.placeholder {

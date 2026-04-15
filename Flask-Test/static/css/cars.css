@@ -31,9 +31,9 @@
 
 .car-preview {
     border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(31, 56, 92, 0.16);
     overflow: hidden;
-    background: rgba(2, 7, 16, 0.72);
+    background: rgba(236, 243, 250, 0.92);
     height: clamp(200px, 30vw, 300px);
 }
 
@@ -42,7 +42,7 @@
     height: 100%;
     object-fit: contain;
     display: block;
-    background: rgba(2, 7, 16, 0.72);
+    background: rgba(236, 243, 250, 0.92);
 }
 
 .car-preview.placeholder {
@@ -63,8 +63,8 @@
     width: 74px;
     height: 74px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(2, 7, 16, 0.72);
+    border: 1px solid rgba(31, 56, 92, 0.16);
+    background: rgba(236, 243, 250, 0.92);
     overflow: hidden;
     flex: 0 0 auto;
     display: grid;

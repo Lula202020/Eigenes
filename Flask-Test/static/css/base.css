@@ -1,16 +1,16 @@
 :root {
-    --bg: #08111f;
-    --bg-soft: #101b2f;
-    --panel: rgba(11, 18, 33, 0.86);
-    --panel-strong: #132038;
-    --border: rgba(255, 255, 255, 0.1);
-    --text: #eef4ff;
-    --muted: #9fb0d0;
-    --accent: #39d0b9;
-    --accent-2: #6aa6ff;
+    --bg: #f4f7fb;
+    --bg-soft: #e9f0f8;
+    --panel: rgba(255, 255, 255, 0.9);
+    --panel-strong: #ffffff;
+    --border: rgba(31, 56, 92, 0.14);
+    --text: #1c2a3a;
+    --muted: #5e7088;
+    --accent: #21b29c;
+    --accent-2: #4c8be7;
     --warning: #ffd166;
     --danger: #ff7b7b;
-    --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    --shadow: 0 20px 60px rgba(36, 67, 108, 0.14);
     --radius: 22px;
 }
 
@@ -22,8 +22,8 @@ html, body {
     margin: 0;
     min-height: 100%;
     background:
-        radial-gradient(circle at top left, rgba(57, 208, 185, 0.22), transparent 34%),
-        radial-gradient(circle at top right, rgba(106, 166, 255, 0.2), transparent 32%),
+        radial-gradient(circle at top left, rgba(33, 178, 156, 0.18), transparent 36%),
+        radial-gradient(circle at top right, rgba(76, 139, 231, 0.16), transparent 34%),
         linear-gradient(160deg, var(--bg), var(--bg-soft));
     color: var(--text);
     font-family: "Segoe UI", "Trebuchet MS", "Aptos", sans-serif;
@@ -131,7 +131,7 @@ h1 {
 
 .selection-card:hover {
     transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.18);
+    border-color: rgba(31, 56, 92, 0.24);
 }
 
 .selection-card.selected {
@@ -180,7 +180,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: 700;
-    color: #dfe8fb;
+    color: #2f425a;
 }
 
 input[type="text"],
@@ -188,8 +188,8 @@ select,
 textarea {
     width: 100%;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(4, 9, 19, 0.72);
+    border: 1px solid rgba(31, 56, 92, 0.2);
+    background: rgba(255, 255, 255, 0.95);
     color: var(--text);
     padding: 14px 15px;
     outline: none;
@@ -225,15 +225,15 @@ button,
 button.secondary,
 .button-link.secondary {
     color: var(--text);
-    background: linear-gradient(135deg, rgba(106, 166, 255, 0.2), rgba(57, 208, 185, 0.18));
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: linear-gradient(135deg, rgba(76, 139, 231, 0.16), rgba(33, 178, 156, 0.14));
+    border: 1px solid rgba(31, 56, 92, 0.18);
 }
 
 button.ghost,
 .button-link.ghost {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid rgba(31, 56, 92, 0.18);
 }
 
 .pill-row {
@@ -245,8 +245,8 @@ button.ghost,
 .pill {
     border-radius: 999px;
     padding: 9px 12px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(31, 56, 92, 0.06);
+    border: 1px solid rgba(31, 56, 92, 0.12);
     color: var(--text);
     font-size: 0.92rem;
 }
@@ -283,9 +283,9 @@ button.ghost,
     margin: 0;
     white-space: pre-wrap;
     word-break: break-word;
-    background: rgba(2, 7, 16, 0.62);
+    background: rgba(255, 255, 255, 0.78);
     border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(31, 56, 92, 0.16);
     padding: 16px;
     max-height: 420px;
     overflow: auto;

@@ -381,7 +381,7 @@ def discover_car_catalog(cars_root: Path) -> list[dict]:
         if not entry.is_dir():
             continue
 
-        logo_file = entry / "logo.png"
+        logo_file = entry / "ui" / "badge.png"
         preview_file = find_car_preview_file(entry)
 
         cars.append(

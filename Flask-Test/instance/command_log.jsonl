@@ -151,3 +151,12 @@
 {"timestamp": "2026-04-15T06:50:55+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}
 {"timestamp": "2026-04-15T06:50:56+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "greatbritain", "layout_id": "default"}}
 {"timestamp": "2026-04-15T06:50:57+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:52:18+00:00", "action": "select_layout", "details": {"track_id": "drift", "layout_id": "default", "layout_config": "", "track_name": "Drift", "layout_name": "Drift"}}
+{"timestamp": "2026-04-15T10:52:26+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "drift", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:52:27+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "drift", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:57:42+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "drift", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:57:43+00:00", "action": "select_car", "details": {"car_id": "audi_90_gto", "car_name": "audi 90 gto", "track_id": "drift", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:57:45+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "drift", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:58:38+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "drift", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:58:41+00:00", "action": "select_car", "details": {"car_id": "audi_90_gto", "car_name": "audi 90 gto", "track_id": "drift", "layout_id": "default"}}
+{"timestamp": "2026-04-15T10:58:42+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "drift", "layout_id": "default"}}
