@@ -1,11 +1,11 @@
 {
-  "race_ini_path": "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\cfg\\race.ini",
-  "tracks_root": "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\content\\tracks",
-  "cars_root": "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\content\\cars",
+  "race_ini_path": "C:\\src\\BIZ\\Asetto Corsa\\Workplace\\Asetto_Files\\race.ini",
+  "tracks_root": "C:\\src\\BIZ\\Asetto Corsa\\GameFiles\\tracks",
+  "cars_root": "C:\\src\\BIZ\\Asetto Corsa\\GameFiles\\cars",
   "game_executable": "",
   "game_args": [],
-  "track_count": 31,
-  "car_count": 23,
+  "track_count": 4,
+  "car_count": 4,
   "tracks": [
     {
       "track_id": "drift",
@@ -310,2452 +310,6 @@
       ],
       "layout_count": 3,
       "multi_layout": true
-    },
-    {
-      "track_id": "imola",
-      "folder_name": "imola",
-      "name": "Imola",
-      "description": "Autodromo Enzo e Dino Ferrari",
-      "tags": [
-        "circuit",
-        "original",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Imola",
-      "length": "4909",
-      "width": "15",
-      "pitboxes": "24",
-      "run": "anti-clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/imola/ui/preview.png",
-      "map_url": "/assets/tracks/imola/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "imola",
-          "name": "Imola",
-          "description": "Autodromo Enzo e Dino Ferrari",
-          "tags": [
-            "circuit",
-            "original",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Imola",
-          "length": "4909",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "anti-clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/imola/ui/preview.png",
-          "map_url": "/assets/tracks/imola/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "italia",
-      "folder_name": "italia",
-      "name": "Italia",
-      "description": "Monza",
-      "tags": [
-        "circuit",
-        "original",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Monza (MI)",
-      "length": "5.793m",
-      "width": "10m-12m",
-      "pitboxes": "26",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/italia/ui/preview.png",
-      "map_url": "/assets/tracks/italia/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "italia",
-          "name": "Italia",
-          "description": "Monza",
-          "tags": [
-            "circuit",
-            "original",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Monza (MI)",
-          "length": "5.793m",
-          "width": "10m-12m",
-          "pitboxes": "26",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/italia/ui/preview.png",
-          "map_url": "/assets/tracks/italia/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "ks_barcelona",
-      "folder_name": "ks_barcelona",
-      "name": "Barcelona - GP",
-      "description": "Circuit de Barcelona",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Spain"
-      ],
-      "country": "Spain",
-      "city": "Montmelo'",
-      "length": "4655",
-      "width": "11",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_barcelona/ui/layout_gp/preview.png",
-      "map_url": "/assets/tracks/ks_barcelona/ui/layout_gp/outline.png",
-      "layouts": [
-        {
-          "layout_id": "layout_gp",
-          "config_track": "layout_gp",
-          "folder_name": "layout_gp",
-          "name": "Barcelona - GP",
-          "description": "Circuit de Barcelona",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Spain"
-          ],
-          "country": "Spain",
-          "city": "Montmelo'",
-          "length": "4655",
-          "width": "11",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_barcelona/ui/layout_gp/preview.png",
-          "map_url": "/assets/tracks/ks_barcelona/ui/layout_gp/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_moto",
-          "config_track": "layout_moto",
-          "folder_name": "layout_moto",
-          "name": "Barcelona - Moto",
-          "description": "Circuit de Barcelona",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Spain"
-          ],
-          "country": "Spain",
-          "city": "Montmelo'",
-          "length": "4727",
-          "width": "11",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_barcelona/ui/layout_moto/preview.png",
-          "map_url": "/assets/tracks/ks_barcelona/ui/layout_moto/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 2,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_black_cat_county",
-      "folder_name": "ks_black_cat_county",
-      "name": "Black Cat County",
-      "description": "Fictional U.S.A. Road",
-      "tags": [
-        "circuit",
-        "drift",
-        "original",
-        "usa"
-      ],
-      "country": "U.S.A.",
-      "city": "Los Angeles",
-      "length": "6478",
-      "width": "15",
-      "pitboxes": "24",
-      "run": "anti-clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/preview.png",
-      "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/outline.png",
-      "layouts": [
-        {
-          "layout_id": "layout_int",
-          "config_track": "layout_int",
-          "folder_name": "layout_int",
-          "name": "Black Cat County",
-          "description": "Fictional U.S.A. Road",
-          "tags": [
-            "circuit",
-            "drift",
-            "original",
-            "usa"
-          ],
-          "country": "U.S.A.",
-          "city": "Los Angeles",
-          "length": "6478",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "anti-clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/preview.png",
-          "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_int/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_long",
-          "config_track": "layout_long",
-          "folder_name": "layout_long",
-          "name": "Black Cat County - Long",
-          "description": "Fictional U.S.A. Road",
-          "tags": [
-            "circuit",
-            "drift",
-            "original",
-            "usa"
-          ],
-          "country": "U.S.A.",
-          "city": "Los Angeles",
-          "length": "11244",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "anti-clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_long/preview.png",
-          "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_long/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_short",
-          "config_track": "layout_short",
-          "folder_name": "layout_short",
-          "name": "Black Cat County - Short",
-          "description": "Fictional U.S.A. Road",
-          "tags": [
-            "circuit",
-            "drift",
-            "original",
-            "usa"
-          ],
-          "country": "U.S.A.",
-          "city": "Los Angeles",
-          "length": "6542",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "anti-clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_black_cat_county/ui/layout_short/preview.png",
-          "map_url": "/assets/tracks/ks_black_cat_county/ui/layout_short/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 3,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_brands_hatch",
-      "folder_name": "ks_brands_hatch",
-      "name": "Brands Hatch - GP",
-      "description": "Brands Hatch Circuit",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Great Britain"
-      ],
-      "country": "Great Britain",
-      "city": "Fawkham",
-      "length": "3908",
-      "width": "11",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_brands_hatch/ui/gp/preview.png",
-      "map_url": "/assets/tracks/ks_brands_hatch/ui/gp/outline.png",
-      "layouts": [
-        {
-          "layout_id": "gp",
-          "config_track": "gp",
-          "folder_name": "gp",
-          "name": "Brands Hatch - GP",
-          "description": "Brands Hatch Circuit",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Great Britain"
-          ],
-          "country": "Great Britain",
-          "city": "Fawkham",
-          "length": "3908",
-          "width": "11",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_brands_hatch/ui/gp/preview.png",
-          "map_url": "/assets/tracks/ks_brands_hatch/ui/gp/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "indy",
-          "config_track": "indy",
-          "folder_name": "indy",
-          "name": "Brands Hatch - Indy",
-          "description": "Brands Hatch Circuit",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Great Britain"
-          ],
-          "country": "Great Britain",
-          "city": "Fawkham",
-          "length": "1929",
-          "width": "11",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_brands_hatch/ui/indy/preview.png",
-          "map_url": "/assets/tracks/ks_brands_hatch/ui/indy/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 2,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_drag",
-      "folder_name": "ks_drag",
-      "name": "Drag 1000m",
-      "description": "fast&furious",
-      "tags": [
-        "drag",
-        "original"
-      ],
-      "country": "Italy",
-      "city": "Imola",
-      "length": "1000",
-      "width": "15",
-      "pitboxes": "2",
-      "run": "dragstrip",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_drag/ui/drag1000/preview.png",
-      "map_url": "/assets/tracks/ks_drag/ui/drag1000/outline.png",
-      "layouts": [
-        {
-          "layout_id": "drag1000",
-          "config_track": "drag1000",
-          "folder_name": "drag1000",
-          "name": "Drag 1000m",
-          "description": "fast&furious",
-          "tags": [
-            "drag",
-            "original"
-          ],
-          "country": "Italy",
-          "city": "Imola",
-          "length": "1000",
-          "width": "15",
-          "pitboxes": "2",
-          "run": "dragstrip",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_drag/ui/drag1000/preview.png",
-          "map_url": "/assets/tracks/ks_drag/ui/drag1000/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "drag200",
-          "config_track": "drag200",
-          "folder_name": "drag200",
-          "name": "Drag 200m",
-          "description": "fast&furious",
-          "tags": [
-            "drag",
-            "original"
-          ],
-          "country": "Italy",
-          "city": "Imola",
-          "length": "200",
-          "width": "15",
-          "pitboxes": "2",
-          "run": "dragstrip",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_drag/ui/drag200/preview.png",
-          "map_url": "/assets/tracks/ks_drag/ui/drag200/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "drag2000",
-          "config_track": "drag2000",
-          "folder_name": "drag2000",
-          "name": "Drag 2000m",
-          "description": "fast&furious",
-          "tags": [
-            "drag",
-            "original"
-          ],
-          "country": "Italy",
-          "city": "Imola",
-          "length": "2000",
-          "width": "15",
-          "pitboxes": "2",
-          "run": "dragstrip",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_drag/ui/drag2000/preview.png",
-          "map_url": "/assets/tracks/ks_drag/ui/drag2000/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "drag400",
-          "config_track": "drag400",
-          "folder_name": "drag400",
-          "name": "Drag 400m",
-          "description": "fast&furious",
-          "tags": [
-            "drag",
-            "original"
-          ],
-          "country": "Italy",
-          "city": "Imola",
-          "length": "400",
-          "width": "15",
-          "pitboxes": "2",
-          "run": "dragstrip",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_drag/ui/drag400/preview.png",
-          "map_url": "/assets/tracks/ks_drag/ui/drag400/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "drag500",
-          "config_track": "drag500",
-          "folder_name": "drag500",
-          "name": "Drag 500m",
-          "description": "fast&furious",
-          "tags": [
-            "drag",
-            "original"
-          ],
-          "country": "Italy",
-          "city": "Imola",
-          "length": "500",
-          "width": "15",
-          "pitboxes": "2",
-          "run": "dragstrip",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_drag/ui/drag500/preview.png",
-          "map_url": "/assets/tracks/ks_drag/ui/drag500/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 5,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_highlands",
-      "folder_name": "ks_highlands",
-      "name": "Highlands Drift",
-      "description": "Highlands drift layout",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Scotland"
-      ],
-      "country": "Scotland",
-      "city": "Fantasy",
-      "length": "5167",
-      "width": "10",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_highlands/ui/layout_drift/preview.png",
-      "map_url": "/assets/tracks/ks_highlands/ui/layout_drift/outline.png",
-      "layouts": [
-        {
-          "layout_id": "layout_drift",
-          "config_track": "layout_drift",
-          "folder_name": "layout_drift",
-          "name": "Highlands Drift",
-          "description": "Highlands drift layout",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Scotland"
-          ],
-          "country": "Scotland",
-          "city": "Fantasy",
-          "length": "5167",
-          "width": "10",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_highlands/ui/layout_drift/preview.png",
-          "map_url": "/assets/tracks/ks_highlands/ui/layout_drift/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_int",
-          "config_track": "layout_int",
-          "folder_name": "layout_int",
-          "name": "Highlands",
-          "description": "Highlands original layout",
-          "tags": [
-            "circuit",
-            "original",
-            "Scotland"
-          ],
-          "country": "Scotland",
-          "city": "Fantasy",
-          "length": "8152",
-          "width": "10",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_highlands/ui/layout_int/preview.png",
-          "map_url": "/assets/tracks/ks_highlands/ui/layout_int/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_long",
-          "config_track": "layout_long",
-          "folder_name": "layout_long",
-          "name": "Highlands Long",
-          "description": "Highlands long layout",
-          "tags": [
-            "circuit",
-            "original",
-            "Scotland"
-          ],
-          "country": "Scotland",
-          "city": "Fantasy",
-          "length": "12191",
-          "width": "10",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_highlands/ui/layout_long/preview.png",
-          "map_url": "/assets/tracks/ks_highlands/ui/layout_long/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_short",
-          "config_track": "layout_short",
-          "folder_name": "layout_short",
-          "name": "Highlands Short",
-          "description": "Highlands short layout",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Scotland"
-          ],
-          "country": "Scotland",
-          "city": "Fantasy",
-          "length": "1714",
-          "width": "10",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_highlands/ui/layout_short/preview.png",
-          "map_url": "/assets/tracks/ks_highlands/ui/layout_short/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 4,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_laguna_seca",
-      "folder_name": "ks_laguna_seca",
-      "name": "Laguna Seca",
-      "description": "Mazda Raceway Laguna Seca",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Usa"
-      ],
-      "country": "USA",
-      "city": "Monterey",
-      "length": "3.602",
-      "width": "11",
-      "pitboxes": "24",
-      "run": "anti-clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_laguna_seca/ui/preview.png",
-      "map_url": "/assets/tracks/ks_laguna_seca/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "ks_laguna_seca",
-          "name": "Laguna Seca",
-          "description": "Mazda Raceway Laguna Seca",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Usa"
-          ],
-          "country": "USA",
-          "city": "Monterey",
-          "length": "3.602",
-          "width": "11",
-          "pitboxes": "24",
-          "run": "anti-clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_laguna_seca/ui/preview.png",
-          "map_url": "/assets/tracks/ks_laguna_seca/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "ks_monza66",
-      "folder_name": "ks_monza66",
-      "name": "Monza 1966 - Full Course",
-      "description": "Autodromo di Monza",
-      "tags": [
-        "circuit",
-        "original",
-        "historic",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Monza (MI)",
-      "length": "10000",
-      "width": "12",
-      "pitboxes": "25",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_monza66/ui/full/preview.png",
-      "map_url": "/assets/tracks/ks_monza66/ui/full/outline.png",
-      "layouts": [
-        {
-          "layout_id": "full",
-          "config_track": "full",
-          "folder_name": "full",
-          "name": "Monza 1966 - Full Course",
-          "description": "Autodromo di Monza",
-          "tags": [
-            "circuit",
-            "original",
-            "historic",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Monza (MI)",
-          "length": "10000",
-          "width": "12",
-          "pitboxes": "25",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_monza66/ui/full/preview.png",
-          "map_url": "/assets/tracks/ks_monza66/ui/full/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "junior",
-          "config_track": "junior",
-          "folder_name": "junior",
-          "name": "Monza 1966 - Junior Course",
-          "description": "Autodromo di Monza",
-          "tags": [
-            "circuit",
-            "original",
-            "historic",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Monza (MI)",
-          "length": "2405",
-          "width": "12",
-          "pitboxes": "25",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_monza66/ui/junior/preview.png",
-          "map_url": "/assets/tracks/ks_monza66/ui/junior/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "road",
-          "config_track": "road",
-          "folder_name": "road",
-          "name": "Monza 1966 - Road Course",
-          "description": "Autodromo di Monza",
-          "tags": [
-            "circuit",
-            "original",
-            "historic",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Monza (MI)",
-          "length": "5793",
-          "width": "12",
-          "pitboxes": "25",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_monza66/ui/road/preview.png",
-          "map_url": "/assets/tracks/ks_monza66/ui/road/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 3,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_nordschleife",
-      "folder_name": "ks_nordschleife",
-      "name": "Nordschleife - Endurance",
-      "description": "Nurburgring Nordschleife",
-      "tags": [
-        "original",
-        "circuit",
-        "Germany"
-      ],
-      "country": "Germany",
-      "city": "Nurburg",
-      "length": "25378",
-      "width": "15",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "50.3356\ufffd N",
-        "6.9475\ufffd E"
-      ],
-      "preview_url": "/assets/tracks/ks_nordschleife/ui/endurance/preview.png",
-      "map_url": "/assets/tracks/ks_nordschleife/map.png",
-      "layouts": [
-        {
-          "layout_id": "endurance",
-          "config_track": "endurance",
-          "folder_name": "endurance",
-          "name": "Nordschleife - Endurance",
-          "description": "Nurburgring Nordschleife",
-          "tags": [
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "25378",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "50.3356\ufffd N",
-            "6.9475\ufffd E"
-          ],
-          "preview_url": "/assets/tracks/ks_nordschleife/ui/endurance/preview.png",
-          "map_url": "/assets/tracks/ks_nordschleife/ui/endurance/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "endurance_cup",
-          "config_track": "endurance_cup",
-          "folder_name": "endurance_cup",
-          "name": "Nordschleife - Endurance Cup",
-          "description": "Nurburgring Nordschleife",
-          "tags": [
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "24433",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "50.3356\ufffd N",
-            "6.9475\ufffd E"
-          ],
-          "preview_url": "/assets/tracks/ks_nordschleife/ui/endurance_cup/preview.png",
-          "map_url": "/assets/tracks/ks_nordschleife/ui/endurance_cup/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "nordschleife",
-          "config_track": "nordschleife",
-          "folder_name": "nordschleife",
-          "name": "Nordschleife",
-          "description": "Nurburgring Nordschleife",
-          "tags": [
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "20832",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "50.3356\ufffd N",
-            "6.9475\ufffd E"
-          ],
-          "preview_url": "/assets/tracks/ks_nordschleife/ui/nordschleife/preview.png",
-          "map_url": "/assets/tracks/ks_nordschleife/ui/nordschleife/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "touristenfahrten",
-          "config_track": "touristenfahrten",
-          "folder_name": "touristenfahrten",
-          "name": "Nordschleife - Tourist",
-          "description": "Nurburgring Nordschleife",
-          "tags": [
-            "A2B",
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "19100",
-          "width": "15",
-          "pitboxes": "32",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "50.3356\ufffd N",
-            "6.9475\ufffd E"
-          ],
-          "preview_url": "/assets/tracks/ks_nordschleife/ui/touristenfahrten/preview.png",
-          "map_url": "/assets/tracks/ks_nordschleife/ui/touristenfahrten/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 4,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_nurburgring",
-      "folder_name": "ks_nurburgring",
-      "name": "Nurburgring - GP",
-      "description": "Nuerburgring",
-      "tags": [
-        "original",
-        "circuit",
-        "Germany"
-      ],
-      "country": "Germany",
-      "city": "Nurburg",
-      "length": "5148",
-      "width": "14",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_nurburgring/ui/layout_gp_a/preview.png",
-      "map_url": "/assets/tracks/ks_nurburgring/ui/layout_gp_a/outline.png",
-      "layouts": [
-        {
-          "layout_id": "layout_gp_a",
-          "config_track": "layout_gp_a",
-          "folder_name": "layout_gp_a",
-          "name": "Nurburgring - GP",
-          "description": "Nuerburgring",
-          "tags": [
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "5148",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_nurburgring/ui/layout_gp_a/preview.png",
-          "map_url": "/assets/tracks/ks_nurburgring/ui/layout_gp_a/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_gp_b",
-          "config_track": "layout_gp_b",
-          "folder_name": "layout_gp_b",
-          "name": "Nurburgring - GP (GT)",
-          "description": "Nuerburgring",
-          "tags": [
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "5137",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_nurburgring/ui/layout_gp_b/preview.png",
-          "map_url": "/assets/tracks/ks_nurburgring/ui/layout_gp_b/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_sprint_a",
-          "config_track": "layout_sprint_a",
-          "folder_name": "layout_sprint_a",
-          "name": "Nurburgring - Sprint",
-          "description": "Nuerburgring",
-          "tags": [
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "3629",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_nurburgring/ui/layout_sprint_a/preview.png",
-          "map_url": "/assets/tracks/ks_nurburgring/ui/layout_sprint_a/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_sprint_b",
-          "config_track": "layout_sprint_b",
-          "folder_name": "layout_sprint_b",
-          "name": "Nurburgring - Sprint (GT)",
-          "description": "Nuerburgring",
-          "tags": [
-            "original",
-            "circuit",
-            "Germany"
-          ],
-          "country": "Germany",
-          "city": "Nurburg",
-          "length": "3618",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_nurburgring/ui/layout_sprint_b/preview.png",
-          "map_url": "/assets/tracks/ks_nurburgring/ui/layout_sprint_b/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 4,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_red_bull_ring",
-      "folder_name": "ks_red_bull_ring",
-      "name": "Red Bull Ring GP",
-      "description": "Red Bull Ring Grand Prix Cricuit",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Austria"
-      ],
-      "country": "Austria",
-      "city": "Spielberg",
-      "length": "4326",
-      "width": "12",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_red_bull_ring/ui/layout_gp/preview.png",
-      "map_url": "/assets/tracks/ks_red_bull_ring/map.png",
-      "layouts": [
-        {
-          "layout_id": "layout_gp",
-          "config_track": "layout_gp",
-          "folder_name": "layout_gp",
-          "name": "Red Bull Ring GP",
-          "description": "Red Bull Ring Grand Prix Cricuit",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Austria"
-          ],
-          "country": "Austria",
-          "city": "Spielberg",
-          "length": "4326",
-          "width": "12",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_red_bull_ring/ui/layout_gp/preview.png",
-          "map_url": "/assets/tracks/ks_red_bull_ring/ui/layout_gp/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_national",
-          "config_track": "layout_national",
-          "folder_name": "layout_national",
-          "name": "Red Bull Ring National",
-          "description": "Red Bull Ring S\u00fcdschleife National Circuit",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Austria"
-          ],
-          "country": "Austria",
-          "city": "Spielberg",
-          "length": "2336",
-          "width": "12",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_red_bull_ring/ui/layout_national/preview.png",
-          "map_url": "/assets/tracks/ks_red_bull_ring/ui/layout_national/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 2,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_silverstone",
-      "folder_name": "ks_silverstone",
-      "name": "Silverstone GP",
-      "description": "Circuit of Silverstone",
-      "tags": [
-        "circuit",
-        "original",
-        "Great Britain"
-      ],
-      "country": "Great Britain",
-      "city": "Silverstone",
-      "length": "5901",
-      "width": "14",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_silverstone/ui/gp/preview.png",
-      "map_url": "/assets/tracks/ks_silverstone/ui/gp/outline.png",
-      "layouts": [
-        {
-          "layout_id": "gp",
-          "config_track": "gp",
-          "folder_name": "gp",
-          "name": "Silverstone GP",
-          "description": "Circuit of Silverstone",
-          "tags": [
-            "circuit",
-            "original",
-            "Great Britain"
-          ],
-          "country": "Great Britain",
-          "city": "Silverstone",
-          "length": "5901",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_silverstone/ui/gp/preview.png",
-          "map_url": "/assets/tracks/ks_silverstone/ui/gp/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "international",
-          "config_track": "international",
-          "folder_name": "international",
-          "name": "Silverstone - International",
-          "description": "Circuit of Silverstone",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Great Britain"
-          ],
-          "country": "Great Britain",
-          "city": "Silverstone",
-          "length": "3619",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_silverstone/ui/international/preview.png",
-          "map_url": "/assets/tracks/ks_silverstone/ui/international/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "national",
-          "config_track": "national",
-          "folder_name": "national",
-          "name": "Silverstone - National",
-          "description": "Circuit of Silverstone",
-          "tags": [
-            "circuit",
-            "original",
-            "Great Britain"
-          ],
-          "country": "Great Britain",
-          "city": "Silverstone",
-          "length": "2638",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_silverstone/ui/national/preview.png",
-          "map_url": "/assets/tracks/ks_silverstone/ui/national/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 3,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_silverstone1967",
-      "folder_name": "ks_silverstone1967",
-      "name": "Silverstone 1967",
-      "description": "Historic Circuit of Silverstone",
-      "tags": [
-        "circuit",
-        "original",
-        "historic",
-        "Great Britain"
-      ],
-      "country": "Great Britain",
-      "city": "Silverstone",
-      "length": "4710",
-      "width": "14",
-      "pitboxes": "20",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_silverstone1967/ui/preview.png",
-      "map_url": "/assets/tracks/ks_silverstone1967/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "ks_silverstone1967",
-          "name": "Silverstone 1967",
-          "description": "Historic Circuit of Silverstone",
-          "tags": [
-            "circuit",
-            "original",
-            "historic",
-            "Great Britain"
-          ],
-          "country": "Great Britain",
-          "city": "Silverstone",
-          "length": "4710",
-          "width": "14",
-          "pitboxes": "20",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_silverstone1967/ui/preview.png",
-          "map_url": "/assets/tracks/ks_silverstone1967/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "ks_vallelunga",
-      "folder_name": "ks_vallelunga",
-      "name": "Vallelunga - Classic",
-      "description": "Autodromo Piero Taruffi",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Rome",
-      "length": "3222",
-      "width": "14",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_vallelunga/ui/classic_circuit/preview.png",
-      "map_url": "/assets/tracks/ks_vallelunga/map.png",
-      "layouts": [
-        {
-          "layout_id": "classic_circuit",
-          "config_track": "classic_circuit",
-          "folder_name": "classic_circuit",
-          "name": "Vallelunga - Classic",
-          "description": "Autodromo Piero Taruffi",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Rome",
-          "length": "3222",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_vallelunga/ui/classic_circuit/preview.png",
-          "map_url": "/assets/tracks/ks_vallelunga/ui/classic_circuit/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "club_circuit",
-          "config_track": "club_circuit",
-          "folder_name": "club_circuit",
-          "name": "Vallelunga - Club",
-          "description": "Autodromo Piero Taruffi",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Rome",
-          "length": "1746",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_vallelunga/ui/club_circuit/preview.png",
-          "map_url": "/assets/tracks/ks_vallelunga/ui/club_circuit/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "extended_circuit",
-          "config_track": "extended_circuit",
-          "folder_name": "extended_circuit",
-          "name": "Vallelunga",
-          "description": "Autodromo Piero Taruffi",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Rome",
-          "length": "4085",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_vallelunga/ui/extended_circuit/preview.png",
-          "map_url": "/assets/tracks/ks_vallelunga/ui/extended_circuit/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 3,
-      "multi_layout": true
-    },
-    {
-      "track_id": "ks_zandvoort",
-      "folder_name": "ks_zandvoort",
-      "name": "Zandvoort",
-      "description": "Zandvoort Circuit Park",
-      "tags": [
-        "circuit",
-        "original",
-        "Netherlands"
-      ],
-      "country": "Netherlands",
-      "city": "Zandvoort",
-      "length": "4307",
-      "width": "13",
-      "pitboxes": "18",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/ks_zandvoort/ui/preview.png",
-      "map_url": "/assets/tracks/ks_zandvoort/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "ks_zandvoort",
-          "name": "Zandvoort",
-          "description": "Zandvoort Circuit Park",
-          "tags": [
-            "circuit",
-            "original",
-            "Netherlands"
-          ],
-          "country": "Netherlands",
-          "city": "Zandvoort",
-          "length": "4307",
-          "width": "13",
-          "pitboxes": "18",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/ks_zandvoort/ui/preview.png",
-          "map_url": "/assets/tracks/ks_zandvoort/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "magione",
-      "folder_name": "magione",
-      "name": "Magione",
-      "description": "Autodromo di Umbria",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Magione",
-      "length": "2507",
-      "width": "11",
-      "pitboxes": "18",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/magione/ui/preview.png",
-      "map_url": "/assets/tracks/magione/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "magione",
-          "name": "Magione",
-          "description": "Autodromo di Umbria",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Magione",
-          "length": "2507",
-          "width": "11",
-          "pitboxes": "18",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/magione/ui/preview.png",
-          "map_url": "/assets/tracks/magione/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "monaco_2019",
-      "folder_name": "monaco_2019",
-      "name": "Monaco GP Circuit-2019",
-      "description": "Circuit de Monaco",
-      "tags": [
-        "circuit",
-        "original",
-        "Monaco"
-      ],
-      "country": "Monaco",
-      "city": "Monte Carlo",
-      "length": "3.340m",
-      "width": "10m-12m",
-      "pitboxes": "22",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": 2019,
-      "geotags": [
-        "43.7401\u00b0 N",
-        "7.4266\u00b0 E"
-      ],
-      "preview_url": "/assets/tracks/monaco_2019/ui/preview.png",
-      "map_url": "/assets/tracks/monaco_2019/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "monaco_2019",
-          "name": "Monaco GP Circuit-2019",
-          "description": "Circuit de Monaco",
-          "tags": [
-            "circuit",
-            "original",
-            "Monaco"
-          ],
-          "country": "Monaco",
-          "city": "Monte Carlo",
-          "length": "3.340m",
-          "width": "10m-12m",
-          "pitboxes": "22",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": 2019,
-          "geotags": [
-            "43.7401\u00b0 N",
-            "7.4266\u00b0 E"
-          ],
-          "preview_url": "/assets/tracks/monaco_2019/ui/preview.png",
-          "map_url": "/assets/tracks/monaco_2019/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "monza",
-      "folder_name": "monza",
-      "name": "Monza",
-      "description": "Autodromo di Monza",
-      "tags": [
-        "circuit",
-        "original",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Monza (MI)",
-      "length": "5793",
-      "width": "12",
-      "pitboxes": "26",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/monza/ui/preview.png",
-      "map_url": "/assets/tracks/monza/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "monza",
-          "name": "Monza",
-          "description": "Autodromo di Monza",
-          "tags": [
-            "circuit",
-            "original",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Monza (MI)",
-          "length": "5793",
-          "width": "12",
-          "pitboxes": "26",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/monza/ui/preview.png",
-          "map_url": "/assets/tracks/monza/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "mugello",
-      "folder_name": "mugello",
-      "name": "Mugello",
-      "description": "Autodromo del Mugello",
-      "tags": [
-        "circuit",
-        "original",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Scarperia",
-      "length": "5245",
-      "width": "14",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/mugello/ui/preview.png",
-      "map_url": "/assets/tracks/mugello/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "mugello",
-          "name": "Mugello",
-          "description": "Autodromo del Mugello",
-          "tags": [
-            "circuit",
-            "original",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Scarperia",
-          "length": "5245",
-          "width": "14",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/mugello/ui/preview.png",
-          "map_url": "/assets/tracks/mugello/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "roma",
-      "folder_name": "roma",
-      "name": "Roma",
-      "description": "Autodromo di Roma",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Rome",
-      "length": "4.085m",
-      "width": "11m-14m",
-      "pitboxes": "22",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/roma/ui/preview.png",
-      "map_url": "/assets/tracks/roma/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "roma",
-          "name": "Roma",
-          "description": "Autodromo di Roma",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Rome",
-          "length": "4.085m",
-          "width": "11m-14m",
-          "pitboxes": "22",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/roma/ui/preview.png",
-          "map_url": "/assets/tracks/roma/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "sanmarino",
-      "folder_name": "sanmarino",
-      "name": "San Marino",
-      "description": "San Marino",
-      "tags": [
-        "circuit",
-        "original",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Imola",
-      "length": "4.909m",
-      "width": "10m-15m",
-      "pitboxes": "24",
-      "run": "anti-clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/sanmarino/ui/preview.png",
-      "map_url": "/assets/tracks/sanmarino/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "sanmarino",
-          "name": "San Marino",
-          "description": "San Marino",
-          "tags": [
-            "circuit",
-            "original",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Imola",
-          "length": "4.909m",
-          "width": "10m-15m",
-          "pitboxes": "24",
-          "run": "anti-clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/sanmarino/ui/preview.png",
-          "map_url": "/assets/tracks/sanmarino/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "spa",
-      "folder_name": "spa",
-      "name": "Spa",
-      "description": "Spa-Francorchamps",
-      "tags": [
-        "circuit",
-        "original",
-        "Belgium"
-      ],
-      "country": "Belgium",
-      "city": "Francorchamps",
-      "length": "7004",
-      "width": "15",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/spa/ui/preview.png",
-      "map_url": "/assets/tracks/spa/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "spa",
-          "name": "Spa",
-          "description": "Spa-Francorchamps",
-          "tags": [
-            "circuit",
-            "original",
-            "Belgium"
-          ],
-          "country": "Belgium",
-          "city": "Francorchamps",
-          "length": "7004",
-          "width": "15",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/spa/ui/preview.png",
-          "map_url": "/assets/tracks/spa/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "tmm_lausitzring",
-      "folder_name": "tmm_lausitzring",
-      "name": "Lausitzring DTM",
-      "description": "Lausitz Ring DTM layout",
-      "tags": [
-        "circuit",
-        "original",
-        "Germany",
-        "DTM"
-      ],
-      "country": "Germany",
-      "city": "Klettwitz",
-      "length": "3288 m",
-      "width": "12-14",
-      "pitboxes": "42",
-      "run": "coutnerclockwise",
-      "author": "TM-Modding",
-      "version": "1.51",
-      "year": 2018,
-      "geotags": [
-        "51\u00b0 32\u2032 25\u2033 N",
-        "13\u00b0 54\u2032 46\u2033 E"
-      ],
-      "preview_url": "/assets/tracks/tmm_lausitzring/ui/layout_dtm/preview.png",
-      "map_url": "/assets/tracks/tmm_lausitzring/ui/layout_dtm/outline.png",
-      "layouts": [
-        {
-          "layout_id": "layout_dtm",
-          "config_track": "layout_dtm",
-          "folder_name": "layout_dtm",
-          "name": "Lausitzring DTM",
-          "description": "Lausitz Ring DTM layout",
-          "tags": [
-            "circuit",
-            "original",
-            "Germany",
-            "DTM"
-          ],
-          "country": "Germany",
-          "city": "Klettwitz",
-          "length": "3288 m",
-          "width": "12-14",
-          "pitboxes": "42",
-          "run": "coutnerclockwise",
-          "author": "TM-Modding",
-          "version": "1.51",
-          "year": 2018,
-          "geotags": [
-            "51\u00b0 32\u2032 25\u2033 N",
-            "13\u00b0 54\u2032 46\u2033 E"
-          ],
-          "preview_url": "/assets/tracks/tmm_lausitzring/ui/layout_dtm/preview.png",
-          "map_url": "/assets/tracks/tmm_lausitzring/ui/layout_dtm/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_dtm21",
-          "config_track": "layout_dtm21",
-          "folder_name": "layout_dtm21",
-          "name": "Lausitzring DTM '21",
-          "description": "Lausitz Ring DTM 2021 season layout",
-          "tags": [
-            "circuit",
-            "original",
-            "Germany",
-            "DTM",
-            "roval"
-          ],
-          "country": "Germany",
-          "city": "Klettwitz",
-          "length": "4525 m",
-          "width": "12-14",
-          "pitboxes": "42",
-          "run": "coutnerclockwise",
-          "author": "TM-Modding",
-          "version": "1.51",
-          "year": 2021,
-          "geotags": [
-            "51\u00b0 32\u2032 25\u2033 N",
-            "13\u00b0 54\u2032 46\u2033 E"
-          ],
-          "preview_url": "/assets/tracks/tmm_lausitzring/ui/layout_dtm21/preview.png",
-          "map_url": "/assets/tracks/tmm_lausitzring/ui/layout_dtm21/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_gp",
-          "config_track": "layout_gp",
-          "folder_name": "layout_gp",
-          "name": "Lausitzring GP",
-          "description": "Lausitz Ring GP layout",
-          "tags": [
-            "circuit",
-            "original",
-            "Germany",
-            "GP"
-          ],
-          "country": "Germany",
-          "city": "Klettwitz",
-          "length": "4445 m",
-          "width": "12-14",
-          "pitboxes": "42",
-          "run": "coutnerclockwise",
-          "author": "TM-Modding",
-          "version": "1.51",
-          "year": 2018,
-          "geotags": [
-            "51\u00b0 32\u2032 25\u2033 N",
-            "13\u00b0 54\u2032 46\u2033 E"
-          ],
-          "preview_url": "/assets/tracks/tmm_lausitzring/ui/layout_gp/preview.png",
-          "map_url": "/assets/tracks/tmm_lausitzring/ui/layout_gp/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_gp_mp",
-          "config_track": "layout_gp_mp",
-          "folder_name": "layout_gp_mp",
-          "name": "Lausitzring GP Multiplayer",
-          "description": "Lausitz Ring GP Multiplayer layout - pitlane entry fix",
-          "tags": [
-            "circuit",
-            "original",
-            "Germany",
-            "GP"
-          ],
-          "country": "Germany",
-          "city": "Klettwitz",
-          "length": "4445 m",
-          "width": "12-14",
-          "pitboxes": "42",
-          "run": "coutnerclockwise",
-          "author": "TM-Modding",
-          "version": "1.51",
-          "year": 2018,
-          "geotags": [
-            "51\u00b0 32\u2032 25\u2033 N",
-            "13\u00b0 54\u2032 46\u2033 E"
-          ],
-          "preview_url": "/assets/tracks/tmm_lausitzring/ui/layout_gp_mp/preview.png",
-          "map_url": "/assets/tracks/tmm_lausitzring/ui/layout_gp_mp/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        },
-        {
-          "layout_id": "layout_oval",
-          "config_track": "layout_oval",
-          "folder_name": "layout_oval",
-          "name": "Lausitzring Oval",
-          "description": "Lausitz Ring oval layout",
-          "tags": [
-            "circuit",
-            "original",
-            "Germany",
-            "oval"
-          ],
-          "country": "Germany",
-          "city": "Klettwitz",
-          "length": "3231 m",
-          "width": "12-14",
-          "pitboxes": "42",
-          "run": "coutnerclockwise",
-          "author": "TM-Modding",
-          "version": "1.51",
-          "year": 2018,
-          "geotags": [
-            "51\u00b0 32\u2032 25\u2033 N",
-            "13\u00b0 54\u2032 46\u2033 E"
-          ],
-          "preview_url": "/assets/tracks/tmm_lausitzring/ui/layout_oval/preview.png",
-          "map_url": "/assets/tracks/tmm_lausitzring/ui/layout_oval/outline.png",
-          "is_default_layout": false,
-          "is_multi_layout": true
-        }
-      ],
-      "layout_count": 5,
-      "multi_layout": true
-    },
-    {
-      "track_id": "toscana",
-      "folder_name": "toscana",
-      "name": "Toscana",
-      "description": "Toscana",
-      "tags": [
-        "circuit",
-        "original",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Scarperia",
-      "length": "5.245m",
-      "width": "14m",
-      "pitboxes": "24",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/toscana/ui/preview.png",
-      "map_url": "/assets/tracks/toscana/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "toscana",
-          "name": "Toscana",
-          "description": "Toscana",
-          "tags": [
-            "circuit",
-            "original",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Scarperia",
-          "length": "5.245m",
-          "width": "14m",
-          "pitboxes": "24",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/toscana/ui/preview.png",
-          "map_url": "/assets/tracks/toscana/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "trento-bondone",
-      "folder_name": "trento-bondone",
-      "name": "Trento-Bondone",
-      "description": "Hillclimb course",
-      "tags": [
-        "A2B",
-        "Hillclimb",
-        "touge",
-        "original",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Trento",
-      "length": "17619",
-      "width": "8",
-      "pitboxes": "4",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/trento-bondone/ui/preview.png",
-      "map_url": "/assets/tracks/trento-bondone/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "trento-bondone",
-          "name": "Trento-Bondone",
-          "description": "Hillclimb course",
-          "tags": [
-            "A2B",
-            "Hillclimb",
-            "touge",
-            "original",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Trento",
-          "length": "17619",
-          "width": "8",
-          "pitboxes": "4",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/trento-bondone/ui/preview.png",
-          "map_url": "/assets/tracks/trento-bondone/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
-    },
-    {
-      "track_id": "umbria",
-      "folder_name": "umbria",
-      "name": "Umbria",
-      "description": "Autodromo di Umbria",
-      "tags": [
-        "circuit",
-        "original",
-        "drift",
-        "Italy"
-      ],
-      "country": "Italy",
-      "city": "Magione",
-      "length": "2.507m",
-      "width": "11m",
-      "pitboxes": "18",
-      "run": "clockwise",
-      "author": "",
-      "version": "",
-      "year": "",
-      "geotags": [
-        "lat",
-        "lon"
-      ],
-      "preview_url": "/assets/tracks/umbria/ui/preview.png",
-      "map_url": "/assets/tracks/umbria/map.png",
-      "layouts": [
-        {
-          "layout_id": "default",
-          "config_track": "",
-          "folder_name": "umbria",
-          "name": "Umbria",
-          "description": "Autodromo di Umbria",
-          "tags": [
-            "circuit",
-            "original",
-            "drift",
-            "Italy"
-          ],
-          "country": "Italy",
-          "city": "Magione",
-          "length": "2.507m",
-          "width": "11m",
-          "pitboxes": "18",
-          "run": "clockwise",
-          "author": "",
-          "version": "",
-          "year": "",
-          "geotags": [
-            "lat",
-            "lon"
-          ],
-          "preview_url": "/assets/tracks/umbria/ui/preview.png",
-          "map_url": "/assets/tracks/umbria/map.png",
-          "is_default_layout": true,
-          "is_multi_layout": false
-        }
-      ],
-      "layout_count": 1,
-      "multi_layout": false
     }
   ],
   "cars": [
@@ -2774,13 +328,6 @@
       "preview_url": "/assets/cars/al_rs6_avant_widebody/skins/Chameleon%20Brown/preview.jpg"
     },
     {
-      "car_id": "audi_100s_coupe",
-      "folder_name": "audi_100s_coupe",
-      "name": "audi 100s coupe",
-      "logo_url": "/assets/cars/audi_100s_coupe/logo.png",
-      "preview_url": "/assets/cars/audi_100s_coupe/skins/00_blu_tec_47/preview.jpg"
-    },
-    {
       "car_id": "audi_90_gto",
       "folder_name": "audi_90_gto",
       "name": "audi 90 gto",
@@ -2793,364 +340,280 @@
       "name": "audi 90 gto s1",
       "logo_url": "/assets/cars/audi_90_gto_s1/logo.png",
       "preview_url": "/assets/cars/audi_90_gto_s1/skins/fairy/preview.jpg"
-    },
-    {
-      "car_id": "audi_rs3_sportback_8p",
-      "folder_name": "audi_rs3_sportback_8p",
-      "name": "audi rs3 sportback 8p",
-      "logo_url": "/assets/cars/audi_rs3_sportback_8p/logo.png",
-      "preview_url": "/assets/cars/audi_rs3_sportback_8p/skins/01_Nardo_grey/preview.jpg"
-    },
-    {
-      "car_id": "audi_s4_racecar_comp",
-      "folder_name": "audi_s4_racecar_comp",
-      "name": "audi s4 racecar comp",
-      "logo_url": "/assets/cars/audi_s4_racecar_comp/logo.png",
-      "preview_url": "/assets/cars/audi_s4_racecar_comp/skins/Champion/preview.jpg"
-    },
-    {
-      "car_id": "btcc_audi_rs3",
-      "folder_name": "btcc_audi_rs3",
-      "name": "btcc audi rs3",
-      "logo_url": "/assets/cars/btcc_audi_rs3/logo.png",
-      "preview_url": "/assets/cars/btcc_audi_rs3/skins/2019_jake_hill/preview.jpg"
-    },
-    {
-      "car_id": "dpw_audi_rs4_avant_redd_tuned",
-      "folder_name": "dpw_audi_rs4_avant_redd_tuned",
-      "name": "dpw audi rs4 avant redd tuned",
-      "logo_url": "/assets/cars/dpw_audi_rs4_avant_redd_tuned/logo.png",
-      "preview_url": "/assets/cars/dpw_audi_rs4_avant_redd_tuned/skins/0mamba_black/preview.jpg"
-    },
-    {
-      "car_id": "F1_2026_Audi_FOM",
-      "folder_name": "F1_2026_Audi_FOM",
-      "name": "F1 2026 Audi FOM",
-      "logo_url": "/assets/cars/F1_2026_Audi_FOM/logo.png",
-      "preview_url": "/assets/cars/F1_2026_Audi_FOM/skins/Skin%201/preview.jpg"
-    },
-    {
-      "car_id": "formula_ultra_26",
-      "folder_name": "formula_ultra_26",
-      "name": "formula ultra 26",
-      "logo_url": "/assets/cars/formula_ultra_26/logo.png",
-      "preview_url": "/assets/cars/formula_ultra_26/skins/2026_audi-motorsport/preview.jpg"
-    },
-    {
-      "car_id": "gp_2026_cad26",
-      "folder_name": "gp_2026_cad26",
-      "name": "gp 2026 cad26",
-      "logo_url": "/assets/cars/gp_2026_cad26/logo.png",
-      "preview_url": "/assets/cars/gp_2026_cad26/skins/Bottas/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_a1s1",
-      "folder_name": "ks_audi_a1s1",
-      "name": "ks audi a1s1",
-      "logo_url": "/assets/cars/ks_audi_a1s1/logo.png",
-      "preview_url": "/assets/cars/ks_audi_a1s1/skins/00_sepang_blue_pearl_effect_br/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_dtm_2020",
-      "folder_name": "ks_audi_dtm_2020",
-      "name": "ks audi dtm 2020",
-      "logo_url": "",
-      "preview_url": "/assets/cars/ks_audi_dtm_2020/skins/rast/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_r18_etron_quattro",
-      "folder_name": "ks_audi_r18_etron_quattro",
-      "name": "ks audi r18 etron quattro",
-      "logo_url": "/assets/cars/ks_audi_r18_etron_quattro/logo.png",
-      "preview_url": "/assets/cars/ks_audi_r18_etron_quattro/skins/00_lm1/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_r8_lms",
-      "folder_name": "ks_audi_r8_lms",
-      "name": "ks audi r8 lms",
-      "logo_url": "/assets/cars/ks_audi_r8_lms/logo.png",
-      "preview_url": "/assets/cars/ks_audi_r8_lms/skins/2014_Hankook_C_Abt_09/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_r8_plus",
-      "folder_name": "ks_audi_r8_plus",
-      "name": "ks audi r8 plus",
-      "logo_url": "/assets/cars/ks_audi_r8_plus/logo.png",
-      "preview_url": "/assets/cars/ks_audi_r8_plus/skins/00_brilliant_red_t/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_s4_97_tuned",
-      "folder_name": "ks_audi_s4_97_tuned",
-      "name": "ks audi s4 97 tuned",
-      "logo_url": "/assets/cars/ks_audi_s4_97_tuned/logo.png",
-      "preview_url": "/assets/cars/ks_audi_s4_97_tuned/skins/ARLOWS_01/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_sport_quattro",
-      "folder_name": "ks_audi_sport_quattro",
-      "name": "ks audi sport quattro",
-      "logo_url": "/assets/cars/ks_audi_sport_quattro/logo.png",
-      "preview_url": "/assets/cars/ks_audi_sport_quattro/skins/00_tornado_red_rings/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_sport_quattro_rally",
-      "folder_name": "ks_audi_sport_quattro_rally",
-      "name": "ks audi sport quattro rally",
-      "logo_url": "/assets/cars/ks_audi_sport_quattro_rally/logo.png",
-      "preview_url": "/assets/cars/ks_audi_sport_quattro_rally/skins/00_racing_2/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_tt_cup",
-      "folder_name": "ks_audi_tt_cup",
-      "name": "ks audi tt cup",
-      "logo_url": "/assets/cars/ks_audi_tt_cup/logo.png",
-      "preview_url": "/assets/cars/ks_audi_tt_cup/skins/00_racing_02/preview.jpg"
-    },
-    {
-      "car_id": "ks_audi_tt_vln",
-      "folder_name": "ks_audi_tt_vln",
-      "name": "ks audi tt vln",
-      "logo_url": "/assets/cars/ks_audi_tt_vln/logo.png",
-      "preview_url": "/assets/cars/ks_audi_tt_vln/skins/00_racing_125/preview.jpg"
-    },
-    {
-      "car_id": "wec_lmp1_audi_r10_tdi_2008",
-      "folder_name": "wec_lmp1_audi_r10_tdi_2008",
-      "name": "wec lmp1 audi r10 tdi 2008",
-      "logo_url": "/assets/cars/wec_lmp1_audi_r10_tdi_2008/logo.png",
-      "preview_url": "/assets/cars/wec_lmp1_audi_r10_tdi_2008/skins/1/preview.jpg"
     }
   ],
-  "selected_track_id": "drift",
-  "selected_layout_id": "",
-  "selected_car": "al_rs6_avant_widebody",
+  "selected_track_id": "heikki_oschersleben",
+  "selected_layout_id": "layout_3",
+  "selected_car": "audi_90_gto_s1",
   "selected_car_entry": {
-    "car_id": "al_rs6_avant_widebody",
-    "folder_name": "al_rs6_avant_widebody",
-    "name": "al rs6 avant widebody",
-    "logo_url": "/assets/cars/al_rs6_avant_widebody/logo.png",
-    "preview_url": "/assets/cars/al_rs6_avant_widebody/skins/Chameleon%20Brown/preview.jpg"
+    "car_id": "audi_90_gto_s1",
+    "folder_name": "audi_90_gto_s1",
+    "name": "audi 90 gto s1",
+    "logo_url": "/assets/cars/audi_90_gto_s1/logo.png",
+    "preview_url": "/assets/cars/audi_90_gto_s1/skins/fairy/preview.jpg"
   },
   "selected_track": {
-    "track_id": "drift",
-    "folder_name": "drift",
-    "name": "Drift",
-    "description": "Drift Track",
+    "track_id": "heikki_oschersleben",
+    "folder_name": "heikki_oschersleben",
+    "name": "Oschersleben 2023 Grand Prix",
+    "description": "Motorsport Arena Oschersleben Grand Prix layout",
     "tags": [
-      "#drift",
-      "drift",
-      "test track",
       "circuit",
       "original",
-      "Japan"
+      "Germany",
+      "GP"
     ],
-    "country": "Japan",
-    "city": "Tokyo",
-    "length": "905",
-    "width": "15",
-    "pitboxes": "18",
-    "run": "DRIFT",
-    "author": "",
-    "version": "",
-    "year": "",
+    "country": "Germany",
+    "city": "Oschersleben",
+    "length": "3611 m",
+    "width": "11-13",
+    "pitboxes": "40",
+    "run": "coutnerclockwise",
+    "author": "Fuzo & Heikki21",
+    "version": "0.3",
+    "year": 2018,
     "geotags": [
-      "lat",
-      "lon"
+      "52\u00b0 02\u2032 43\u2033 N",
+      "11\u00b0 14\u2032 42\u2033 E"
     ],
-    "preview_url": "/assets/tracks/drift/ui/preview.png",
-    "map_url": "/assets/tracks/drift/map.png",
+    "preview_url": "/assets/tracks/heikki_oschersleben/ui/layout_1/preview.png",
+    "map_url": "/assets/tracks/heikki_oschersleben/map.png",
     "layouts": [
       {
-        "layout_id": "default",
-        "config_track": "",
-        "folder_name": "drift",
-        "name": "Drift",
-        "description": "Drift Track",
+        "layout_id": "layout_1",
+        "config_track": "layout_1",
+        "folder_name": "layout_1",
+        "name": "Oschersleben 2023 Grand Prix",
+        "description": "Motorsport Arena Oschersleben Grand Prix layout",
         "tags": [
-          "#drift",
-          "drift",
-          "test track",
           "circuit",
           "original",
-          "Japan"
+          "Germany",
+          "GP"
         ],
-        "country": "Japan",
-        "city": "Tokyo",
-        "length": "905",
-        "width": "15",
-        "pitboxes": "18",
-        "run": "DRIFT",
-        "author": "",
-        "version": "",
-        "year": "",
+        "country": "Germany",
+        "city": "Oschersleben",
+        "length": "3611 m",
+        "width": "11-13",
+        "pitboxes": "40",
+        "run": "coutnerclockwise",
+        "author": "Fuzo & Heikki21",
+        "version": "0.3",
+        "year": 2018,
         "geotags": [
-          "lat",
-          "lon"
+          "52\u00b0 02\u2032 43\u2033 N",
+          "11\u00b0 14\u2032 42\u2033 E"
         ],
-        "preview_url": "/assets/tracks/drift/ui/preview.png",
-        "map_url": "/assets/tracks/drift/map.png",
-        "is_default_layout": true,
-        "is_multi_layout": false
+        "preview_url": "/assets/tracks/heikki_oschersleben/ui/layout_1/preview.png",
+        "map_url": "/assets/tracks/heikki_oschersleben/ui/layout_1/outline.png",
+        "is_default_layout": false,
+        "is_multi_layout": true
+      },
+      {
+        "layout_id": "layout_2",
+        "config_track": "layout_2",
+        "folder_name": "layout_2",
+        "name": "Oschersleben 2023 Alternate",
+        "description": "Motorsport Arena Oschersleben Alternate layout (sharp T1)",
+        "tags": [
+          "circuit",
+          "original",
+          "Germany"
+        ],
+        "country": "Germany",
+        "city": "Oschersleben",
+        "length": "3667",
+        "width": "11-13",
+        "pitboxes": "40",
+        "run": "coutnerclockwise",
+        "author": "Fuzo & Heikki21",
+        "version": "0.3",
+        "year": 2018,
+        "geotags": [
+          "52\u00b0 02\u2032 43\u2033 N",
+          "11\u00b0 14\u2032 42\u2033 E"
+        ],
+        "preview_url": "/assets/tracks/heikki_oschersleben/ui/layout_2/preview.png",
+        "map_url": "/assets/tracks/heikki_oschersleben/ui/layout_2/outline.png",
+        "is_default_layout": false,
+        "is_multi_layout": true
+      },
+      {
+        "layout_id": "layout_3",
+        "config_track": "layout_3",
+        "folder_name": "layout_3",
+        "name": "Oschersleben 2023 Short",
+        "description": "Motorsport Arena Oschersleben Short (club) layout",
+        "tags": [
+          "circuit",
+          "original",
+          "Germany",
+          "club",
+          "short"
+        ],
+        "country": "Germany",
+        "city": "Oschersleben",
+        "length": "2407 m",
+        "width": "11-13",
+        "pitboxes": "40",
+        "run": "coutnerclockwise",
+        "author": "Fuzo & Heikki21",
+        "version": "0.3",
+        "year": 2018,
+        "geotags": [
+          "52\u00b0 02\u2032 43\u2033 N",
+          "11\u00b0 14\u2032 42\u2033 E"
+        ],
+        "preview_url": "/assets/tracks/heikki_oschersleben/ui/layout_3/preview.png",
+        "map_url": "/assets/tracks/heikki_oschersleben/ui/layout_3/outline.png",
+        "is_default_layout": false,
+        "is_multi_layout": true
       }
     ],
-    "layout_count": 1,
-    "multi_layout": false
+    "layout_count": 3,
+    "multi_layout": true
   },
   "selected_layout": {
-    "layout_id": "default",
-    "config_track": "",
-    "folder_name": "drift",
-    "name": "Drift",
-    "description": "Drift Track",
+    "layout_id": "layout_3",
+    "config_track": "layout_3",
+    "folder_name": "layout_3",
+    "name": "Oschersleben 2023 Short",
+    "description": "Motorsport Arena Oschersleben Short (club) layout",
     "tags": [
-      "#drift",
-      "drift",
-      "test track",
       "circuit",
       "original",
-      "Japan"
+      "Germany",
+      "club",
+      "short"
     ],
-    "country": "Japan",
-    "city": "Tokyo",
-    "length": "905",
-    "width": "15",
-    "pitboxes": "18",
-    "run": "DRIFT",
-    "author": "",
-    "version": "",
-    "year": "",
+    "country": "Germany",
+    "city": "Oschersleben",
+    "length": "2407 m",
+    "width": "11-13",
+    "pitboxes": "40",
+    "run": "coutnerclockwise",
+    "author": "Fuzo & Heikki21",
+    "version": "0.3",
+    "year": 2018,
     "geotags": [
-      "lat",
-      "lon"
+      "52\u00b0 02\u2032 43\u2033 N",
+      "11\u00b0 14\u2032 42\u2033 E"
     ],
-    "preview_url": "/assets/tracks/drift/ui/preview.png",
-    "map_url": "/assets/tracks/drift/map.png",
-    "is_default_layout": true,
-    "is_multi_layout": false
+    "preview_url": "/assets/tracks/heikki_oschersleben/ui/layout_3/preview.png",
+    "map_url": "/assets/tracks/heikki_oschersleben/ui/layout_3/outline.png",
+    "is_default_layout": false,
+    "is_multi_layout": true
   },
   "active_game_pid": "",
-  "message": "",
-  "message_kind": "info",
+  "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)",
+  "message_kind": "warning",
   "recent_commands": [
     {
-      "timestamp": "2026-04-14T06:17:44+00:00",
+      "timestamp": "2026-04-15T06:08:08+00:00",
+      "action": "control",
+      "details": {
+        "action": "shift_up"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T06:08:09+00:00",
       "action": "launch",
       "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "car_id": "al_rs6_avant_widebody",
-        "success": true,
-        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
+        "track_id": "heikki_oschersleben",
+        "layout_id": "layout_3",
+        "car_id": "audi_90_gto_s1",
+        "success": false,
+        "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"
       }
     },
     {
-      "timestamp": "2026-04-14T06:18:03+00:00",
-      "action": "stop_game",
+      "timestamp": "2026-04-15T06:08:11+00:00",
+      "action": "control",
       "details": {
-        "mode": "taskkill",
-        "result": 0,
-        "active": {}
+        "action": "shift_down"
       }
     },
     {
-      "timestamp": "2026-04-14T06:19:45+00:00",
-      "action": "select_layout",
-      "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "layout_config": "",
-        "track_name": "Drift",
-        "layout_name": "Drift"
-      }
-    },
-    {
-      "timestamp": "2026-04-14T06:20:28+00:00",
+      "timestamp": "2026-04-15T06:08:11+00:00",
       "action": "launch",
       "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "car_id": "al_rs6_avant_widebody",
-        "success": true,
-        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
+        "track_id": "heikki_oschersleben",
+        "layout_id": "layout_3",
+        "car_id": "audi_90_gto_s1",
+        "success": false,
+        "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"
       }
     },
     {
-      "timestamp": "2026-04-14T06:20:59+00:00",
-      "action": "stop_game",
+      "timestamp": "2026-04-15T06:08:13+00:00",
+      "action": "control",
       "details": {
-        "mode": "taskkill",
-        "result": 128,
-        "active": {}
+        "action": "shift_up"
       }
     },
     {
-      "timestamp": "2026-04-14T06:21:25+00:00",
-      "action": "select_layout",
-      "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "layout_config": "",
-        "track_name": "Drift",
-        "layout_name": "Drift"
-      }
-    },
-    {
-      "timestamp": "2026-04-14T06:21:34+00:00",
+      "timestamp": "2026-04-15T06:08:14+00:00",
       "action": "launch",
       "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "car_id": "al_rs6_avant_widebody",
-        "success": true,
-        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
+        "track_id": "heikki_oschersleben",
+        "layout_id": "layout_3",
+        "car_id": "audi_90_gto_s1",
+        "success": false,
+        "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"
       }
     },
     {
-      "timestamp": "2026-04-14T06:21:39+00:00",
-      "action": "stop_game",
+      "timestamp": "2026-04-15T06:08:23+00:00",
+      "action": "control",
       "details": {
-        "mode": "taskkill",
-        "result": 0,
-        "active": {}
+        "action": "shift_up"
       }
     },
     {
-      "timestamp": "2026-04-14T06:22:32+00:00",
-      "action": "stop_game",
-      "details": {
-        "mode": "taskkill",
-        "result": 128,
-        "active": {}
-      }
-    },
-    {
-      "timestamp": "2026-04-14T06:23:22+00:00",
-      "action": "select_layout",
-      "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "layout_config": "",
-        "track_name": "Drift",
-        "layout_name": "Drift"
-      }
-    },
-    {
-      "timestamp": "2026-04-14T06:23:24+00:00",
+      "timestamp": "2026-04-15T06:08:23+00:00",
       "action": "launch",
       "details": {
-        "track_id": "drift",
-        "layout_id": "default",
-        "car_id": "al_rs6_avant_widebody",
-        "success": true,
-        "message": "Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe"
+        "track_id": "heikki_oschersleben",
+        "layout_id": "layout_3",
+        "car_id": "audi_90_gto_s1",
+        "success": false,
+        "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"
       }
     },
     {
-      "timestamp": "2026-04-14T06:23:28+00:00",
-      "action": "stop_game",
+      "timestamp": "2026-04-15T06:08:24+00:00",
+      "action": "control",
       "details": {
-        "mode": "pm2",
-        "result": 0
+        "action": "shift_up"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T06:08:25+00:00",
+      "action": "launch",
+      "details": {
+        "track_id": "heikki_oschersleben",
+        "layout_id": "layout_3",
+        "car_id": "audi_90_gto_s1",
+        "success": false,
+        "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T06:08:25+00:00",
+      "action": "control",
+      "details": {
+        "action": "shift_up"
+      }
+    },
+    {
+      "timestamp": "2026-04-15T06:08:26+00:00",
+      "action": "launch",
+      "details": {
+        "track_id": "heikki_oschersleben",
+        "layout_id": "layout_3",
+        "car_id": "audi_90_gto_s1",
+        "success": false,
+        "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"
       }
     }
   ]

@@ -23,11 +23,11 @@ COMMAND_LOG_FILE = INSTANCE_DIR / "command_log.jsonl"
 ACTIVE_GAME_FILE = INSTANCE_DIR / "active_game.json"
 
 AVAILABLE_ACTIONS = {
-    "shift_up": "Shift up",
-    "shift_down": "Shift down",
-    "reverse": "Reverse",
+    "shift_up": "Hochschalten",
+    "shift_down": "Runterschalten",
+    "reverse": "Rückwärts",
     "neutral": "Neutral",
-    "forward": "Forward",
+    "forward": "Vorwärts",
 }
 
 
@@ -162,13 +162,13 @@ def settings_template_context(message: str = "", message_kind: str = "info") -> 
 def open_system_dialog(kind: str, initial_path: str = "") -> tuple[bool, str]:
     kind = (kind or "").strip().lower()
     if kind not in {"folder", "file"}:
-        return False, "Unsupported dialog type."
+        return False, "Nicht unterstützter Dialogtyp."
 
     try:
         import tkinter as tk
         from tkinter import filedialog
     except Exception as exc:  # pragma: no cover - depends on OS GUI availability
-        return False, f"Dialog backend is unavailable: {exc}"
+        return False, f"Dialog-Backend ist nicht verfügbar: {exc}"
 
     root = tk.Tk()
     root.withdraw()
@@ -194,12 +194,12 @@ def open_system_dialog(kind: str, initial_path: str = "") -> tuple[bool, str]:
             selected = filedialog.askopenfilename(**options)
     except Exception as exc:  # pragma: no cover - depends on OS GUI availability
         root.destroy()
-        return False, f"Could not open system dialog: {exc}"
+        return False, f"Systemdialog konnte nicht geöffnet werden: {exc}"
 
     root.destroy()
 
     if not selected:
-        return False, "No selection was made."
+        return False, "Keine Auswahl getroffen."
 
     return True, selected
 
@@ -269,7 +269,7 @@ def build_layout_entry(track_dir: Path, layout_dir: Path | None) -> dict:
     else:
         json_path = layout_dir / "ui_track.json"
         preview_path = layout_dir / "preview.png"
-        map_candidates = [layout_dir / "outline.png"]
+        map_candidates = [layout_dir / "map.png", layout_dir / "outline.png"]
         layout_id = layout_dir.name
         config_track = layout_dir.name
         is_default_layout = False
@@ -432,7 +432,7 @@ def read_selection_state(path: Path) -> tuple[str, str, str]:
 
 def update_track_selection(path: Path, track_id: str, layout_config: str) -> None:
     if not path.exists():
-        raise FileNotFoundError(f"Race ini file not found: {path}")
+        raise FileNotFoundError(f"Race-ini-Datei nicht gefunden: {path}")
 
     lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
     update_key_in_section(lines, "RACE", "TRACK", track_id)
@@ -442,7 +442,7 @@ def update_track_selection(path: Path, track_id: str, layout_config: str) -> Non
 
 def update_car_selection(path: Path, car_id: str) -> None:
     if not path.exists():
-        raise FileNotFoundError(f"Race ini file not found: {path}")
+        raise FileNotFoundError(f"Race-ini-Datei nicht gefunden: {path}")
 
     lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
     update_key_in_section(lines, "RACE", "MODEL", car_id)
@@ -615,7 +615,7 @@ def update_key_in_section(lines: list[str], section: str, key: str, value: str) 
 def update_race_ini_values(path: Path, track: str, car: str) -> None:
     """Update the selected track and car in race.ini."""
     if not path.exists():
-        raise FileNotFoundError(f"Race ini file not found: {path}")
+        raise FileNotFoundError(f"Race-ini-Datei nicht gefunden: {path}")
 
     lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
     update_key_in_section(lines, "RACE", "TRACK", track)
@@ -628,18 +628,18 @@ def update_race_ini_values(path: Path, track: str, car: str) -> None:
 def launch_game(settings: LauncherSettings) -> tuple[bool, str]:
     if pm2_game_is_available():
         command = "pm2 start Game"
-        launch_message = "Game launch command sent: pm2 start Game"
+        launch_message = "Spielstart-Befehl gesendet: pm2 start Game"
     else:
         command = 'cd "C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19" && pm2 start acs_pro.exe --name Game'
-        launch_message = 'Game launch command sent: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe'
+        launch_message = 'Spielstart-Befehl gesendet: pm2 start C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\\acs_pro.exe'
 
     try:
         exit_code = os.system(command)
     except Exception as exc:  # pragma: no cover - surfaced to the UI instead
-        return False, f"Failed to launch game: {exc}"
+        return False, f"Spielstart fehlgeschlagen: {exc}"
 
     if exit_code != 0:
-        return False, f"Failed to launch game: {command} (exit code {exit_code})"
+        return False, f"Spielstart fehlgeschlagen: {command} (Exit-Code {exit_code})"
 
     clear_active_game_process()
 
@@ -697,13 +697,17 @@ def tracks_overview():
 def settings_page():
     message = (request.args.get("message") or "").strip()
     message_kind = (request.args.get("kind") or "info").strip() or "info"
-    return render_template("settings.html", **settings_template_context(message=message, message_kind=message_kind))
+    return render_template(
+        "settings.html",
+        **settings_template_context(message=message, message_kind=message_kind),
+        back_url=url_for("tracks_overview"),
+    )
 
 
 @app.post("/settings")
 def settings_save():
     save_launcher_config_from_form(request.form)
-    return redirect(url_for("settings_page", message="Settings saved.", kind="success"))
+    return redirect(url_for("settings_page", message="Einstellungen gespeichert.", kind="success"))
 
 
 @app.post("/api/dialog")
@@ -724,8 +728,8 @@ def track_detail(track_id: str):
     context = build_browser_context()
     track = find_track(context["tracks"], track_id)
     if track is None:
-        abort(404, description="Track not found.")
-    return render_template("track_detail.html", **context, track=track)
+        abort(404, description="Strecke nicht gefunden.")
+    return render_template("track_detail.html", **context, track=track, back_url=url_for("tracks_overview"))
 
 
 @app.post("/tracks/<track_id>/layouts/<layout_id>/select")
@@ -733,11 +737,11 @@ def select_layout(track_id: str, layout_id: str):
     context = build_browser_context()
     track = find_track(context["tracks"], track_id)
     if track is None:
-        abort(404, description="Track not found.")
+        abort(404, description="Strecke nicht gefunden.")
 
     layout = find_layout(track, layout_id)
     if layout is None:
-        abort(404, description="Layout not found.")
+        abort(404, description="Layout nicht gefunden.")
 
     settings = load_settings()
     update_track_selection(settings.race_ini_path, track_id, layout["config_track"])
@@ -752,16 +756,20 @@ def select_layout(track_id: str, layout_id: str):
         },
     )
 
-    build_browser_context(message=f"Saved {track['name']} / {layout['name']}.", message_kind="success")
+    build_browser_context(message=f"Gespeichert: {track['name']} / {layout['name']}.", message_kind="success")
     return redirect(url_for("cars_placeholder"))
 
 
 @app.get("/cars")
 def cars_placeholder():
-    context = build_browser_context(message="Select your car.", message_kind="info")
+    context = build_browser_context(message="Wähle dein Auto.", message_kind="info")
     if not context["selected_track"] or not context["selected_layout"]:
         return redirect(url_for("tracks_overview"))
-    return render_template("cars.html", **context)
+    return render_template(
+        "cars.html",
+        **context,
+        back_url=url_for("track_detail", track_id=context["selected_track_id"]),
+    )
 
 
 @app.post("/start-game")
@@ -804,21 +812,30 @@ def stop_game():
 
 @app.get("/drive")
 def drive_page():
-    context = build_browser_context(message="Drive controls ready.", message_kind="info")
+    context = build_browser_context(message="Fahrsteuerung bereit.", message_kind="info")
     if not has_full_selection(context):
         return redirect(url_for("cars_placeholder"))
-    return render_template("drive.html", **context, available_actions=AVAILABLE_ACTIONS)
+    return render_template(
+        "drive.html",
+        **context,
+        available_actions=AVAILABLE_ACTIONS,
+        back_url=url_for("cars_placeholder"),
+    )
 
 
 @app.post("/cars/<car_id>/select")
 def select_car(car_id: str):
     context = build_browser_context()
     if not context["selected_track"] or not context["selected_layout"]:
+        if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+            return jsonify({"ok": False, "error": "Strecke oder Layout fehlt."}), 400
         return redirect(url_for("tracks_overview"))
 
     car = find_car(context["cars"], car_id)
     if car is None:
-        abort(404, description="Car not found.")
+        if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+            return jsonify({"ok": False, "error": "Auto nicht gefunden."}), 404
+        abort(404, description="Auto nicht gefunden.")
 
     settings = load_settings()
     update_car_selection(settings.race_ini_path, car_id)
@@ -832,7 +849,11 @@ def select_car(car_id: str):
         },
     )
 
-    updated_context = build_browser_context(message=f"Car selected: {car['name']}", message_kind="success")
+    updated_context = build_browser_context(message=f"Auto ausgewählt: {car['name']}", message_kind="success")
+
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return jsonify({"ok": True, "car_id": car_id, "car_name": car["name"]})
+
     return render_template("cars.html", **updated_context)
 
 
@@ -858,12 +879,12 @@ def race_post():
     track, car = extract_selection(request.form)
 
     if not track or not car:
-        abort(400, description="Track and car are required.")
+        abort(400, description="Strecke und Auto sind erforderlich.")
 
     update_race_ini_values(settings.race_ini_path, track, car)
     append_command_log("configure", {"track": track, "car": car, "race_ini_path": str(settings.race_ini_path)})
 
-    message = f"Saved {track} / {car} to {settings.race_ini_path.name}."
+    message = f"{track} / {car} in {settings.race_ini_path.name} gespeichert."
     context = load_dashboard_context(message=message, message_kind="success")
     return render_template("success.html", **context)
 
@@ -874,7 +895,7 @@ def launch():
     track, car = extract_selection(request.form)
 
     if not track or not car:
-        abort(400, description="Track and car are required.")
+        abort(400, description="Strecke und Auto sind erforderlich.")
 
     update_race_ini_values(settings.race_ini_path, track, car)
     append_command_log("configure", {"track": track, "car": car, "race_ini_path": str(settings.race_ini_path)})
@@ -892,7 +913,7 @@ def api_control():
     action = str(payload.get("action", "")).strip().lower()
 
     if action not in AVAILABLE_ACTIONS:
-        return jsonify({"ok": False, "error": "Unknown action."}), 400
+        return jsonify({"ok": False, "error": "Unbekannte Aktion."}), 400
 
     append_command_log("control", {"action": action})
     return jsonify({"ok": True, "action": action, "label": AVAILABLE_ACTIONS[action], "timestamp": utc_now()})

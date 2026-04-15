@@ -1,279 +1,264 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Asetto Launcher{% endblock %}</title>
-    <style>
-        :root {
-            --bg: #08111f;
-            --bg-soft: #101b2f;
-            --panel: rgba(11, 18, 33, 0.86);
-            --panel-strong: #132038;
-            --border: rgba(255, 255, 255, 0.1);
-            --text: #eef4ff;
-            --muted: #9fb0d0;
-            --accent: #39d0b9;
-            --accent-2: #6aa6ff;
-            --warning: #ffd166;
-            --danger: #ff7b7b;
-            --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-            --radius: 22px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html, body {
-            margin: 0;
-            min-height: 100%;
-            background:
-                radial-gradient(circle at top left, rgba(57, 208, 185, 0.22), transparent 34%),
-                radial-gradient(circle at top right, rgba(106, 166, 255, 0.2), transparent 32%),
-                linear-gradient(160deg, var(--bg), var(--bg-soft));
-            color: var(--text);
-            font-family: "Segoe UI", "Trebuchet MS", "Aptos", sans-serif;
-        }
-
-        body {
-            padding: 24px;
-        }
-
-        .page {
-            max-width: 1240px;
-            margin: 0 auto;
-        }
-
-        .hero {
-            display: grid;
-            gap: 14px;
-            margin-bottom: 22px;
-        }
-
-        .eyebrow {
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: var(--accent);
-            font-size: 0.76rem;
-            font-weight: 700;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: clamp(2.2rem, 5vw, 4.2rem);
-            line-height: 0.95;
-        }
-
-        .subtitle {
-            max-width: 70ch;
-            color: var(--muted);
-            margin: 0;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 18px;
-        }
-
-        .carousel-shell {
-            position: relative;
-        }
-
-        .carousel-track {
-            display: flex;
-            gap: 18px;
-            overflow-x: auto;
-            padding: 4px 2px 18px;
-            scroll-snap-type: x mandatory;
-            scroll-padding-inline: 18px;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            touch-action: pan-x;
-        }
-
-        .carousel-track::-webkit-scrollbar {
-            display: none;
-        }
-
-        .carousel-item {
-            flex: 0 0 auto;
-            scroll-snap-align: start;
-        }
-
-        .carousel-hint {
-            margin-top: 12px;
-            color: var(--muted);
-            font-size: 0.92rem;
-        }
-
-        .card {
-            background: var(--panel);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(14px);
-            padding: 18px;
-        }
-
-        .card h2 {
-            margin: 0 0 8px;
-            font-size: 1.1rem;
-        }
-
-        .card p,
-        .meta,
-        .muted {
-            color: var(--muted);
-        }
-
-        .stack {
-            display: grid;
-            gap: 16px;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: #dfe8fb;
-        }
-
-        input[type="text"],
-        select,
-        textarea {
-            width: 100%;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            background: rgba(4, 9, 19, 0.72);
-            color: var(--text);
-            padding: 14px 15px;
-            outline: none;
-        }
-
-        input[type="text"]:focus,
-        select:focus,
-        textarea:focus {
-            border-color: rgba(57, 208, 185, 0.75);
-            box-shadow: 0 0 0 3px rgba(57, 208, 185, 0.12);
-        }
-
-        .actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        button,
-        .button-link {
-            appearance: none;
-            border: 0;
-            border-radius: 14px;
-            padding: 13px 18px;
-            font-weight: 800;
-            text-decoration: none;
-            color: #06111b;
-            background: linear-gradient(135deg, var(--accent), #84f2e1);
-            cursor: pointer;
-        }
-
-        button.secondary,
-        .button-link.secondary {
-            color: var(--text);
-            background: linear-gradient(135deg, rgba(106, 166, 255, 0.2), rgba(57, 208, 185, 0.18));
-            border: 1px solid rgba(255, 255, 255, 0.14);
-        }
-
-        button.ghost,
-        .button-link.ghost {
-            color: var(--text);
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .pill-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .pill {
-            border-radius: 999px;
-            padding: 9px 12px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text);
-            font-size: 0.92rem;
-        }
-
-        .status {
-            border-left: 4px solid var(--accent);
-            background: rgba(57, 208, 185, 0.08);
-            padding: 14px 16px;
-            border-radius: 16px;
-        }
-
-        .status.warning {
-            border-left-color: var(--warning);
-            background: rgba(255, 209, 102, 0.08);
-        }
-
-        .status.error {
-            border-left-color: var(--danger);
-            background: rgba(255, 123, 123, 0.08);
-        }
-
-        .control-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-        }
-
-        .control-grid button {
-            width: 100%;
-            min-height: 62px;
-        }
-
-        .log {
-            margin: 0;
-            white-space: pre-wrap;
-            word-break: break-word;
-            background: rgba(2, 7, 16, 0.62);
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 16px;
-            max-height: 420px;
-            overflow: auto;
-        }
-
-        .footer {
-            margin-top: 18px;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 940px) {
-            .grid,
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            body {
-                padding: 16px;
-            }
-        }
-    </style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <script>
+        function persistClosestTrackScroll(node) {
+            const track = node ? node.closest(".carousel-track[data-persist-key]") : null;
+            if (!track) {
+                return;
+            }
+
+            const key = track.dataset.persistKey;
+            if (!key) {
+                return;
+            }
+
+            sessionStorage.setItem(`carousel-scroll:${key}`, String(track.scrollLeft));
+        }
+
+        function setupPersistedCarouselScroll() {
+            document.querySelectorAll(".carousel-track[data-persist-key]").forEach((track) => {
+                const key = track.dataset.persistKey;
+                if (!key) {
+                    return;
+                }
+
+                const storageKey = `carousel-scroll:${key}`;
+                const savedValue = Number.parseFloat(sessionStorage.getItem(storageKey) || "");
+
+                if (Number.isFinite(savedValue) && savedValue >= 0) {
+                    // Apply on next frame so widths are measured and scroll bounds are valid.
+                    window.requestAnimationFrame(() => {
+                        const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+                        track.scrollLeft = Math.min(maxLeft, savedValue);
+                    });
+                }
+
+                track.addEventListener("scroll", () => {
+                    sessionStorage.setItem(storageKey, String(track.scrollLeft));
+                }, { passive: true });
+            });
+        }
+
+        function setupCarouselMouseDrag() {
+            const tracks = document.querySelectorAll(".carousel-track");
+
+            tracks.forEach((track) => {
+                let isPointerDown = false;
+                let activePointerId = null;
+                let startX = 0;
+                let startScrollLeft = 0;
+                let dragDistance = 0;
+                let suppressClick = false;
+
+                const hasOverflow = () => track.scrollWidth - track.clientWidth > 2;
+
+                const settleToNearestCard = () => {
+                    const cards = Array.from(track.querySelectorAll(".carousel-item"));
+                    if (!cards.length || !hasOverflow()) {
+                        return;
+                    }
+
+                    const currentLeft = track.scrollLeft;
+                    const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+                    const endThreshold = Math.max(80, Math.floor(track.clientWidth * 0.18));
+
+                    if (maxLeft - currentLeft <= endThreshold) {
+                        const reduceMotionNearEnd = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                        track.scrollTo({
+                            left: maxLeft,
+                            behavior: reduceMotionNearEnd ? "auto" : "smooth",
+                        });
+                        return;
+                    }
+
+                    const trackRect = track.getBoundingClientRect();
+                    let nearestLeft = currentLeft;
+                    let nearestDistance = Number.POSITIVE_INFINITY;
+
+                    cards.forEach((card, index) => {
+                        const cardRect = card.getBoundingClientRect();
+                        const candidateLeft = currentLeft + (cardRect.left - trackRect.left);
+                        const distance = Math.abs(candidateLeft - currentLeft);
+                        if (distance < nearestDistance) {
+                            nearestDistance = distance;
+                            nearestLeft = candidateLeft;
+                        }
+
+                        if (index === cards.length - 1) {
+                            const endDistance = Math.abs(maxLeft - currentLeft);
+                            if (endDistance < nearestDistance) {
+                                nearestDistance = endDistance;
+                                nearestLeft = maxLeft;
+                            }
+                        }
+                    });
+
+                    const targetLeft = Math.min(maxLeft, Math.max(0, nearestLeft));
+                    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+                    track.scrollTo({
+                        left: targetLeft,
+                        behavior: reduceMotion ? "auto" : "smooth",
+                    });
+                };
+
+                const endDrag = () => {
+                    if (!isPointerDown) {
+                        return;
+                    }
+
+                    isPointerDown = false;
+                    track.classList.remove("dragging");
+                    activePointerId = null;
+
+                    // Smoothly settle to the nearest card instead of hard snapping.
+                    settleToNearestCard();
+                };
+
+                track.addEventListener("pointerdown", (event) => {
+                    if (event.pointerType === "mouse" && event.button !== 0) {
+                        return;
+                    }
+                    if (!hasOverflow()) {
+                        return;
+                    }
+
+                    isPointerDown = true;
+                    activePointerId = event.pointerId;
+                    startX = event.clientX;
+                    startScrollLeft = track.scrollLeft;
+                    dragDistance = 0;
+                    suppressClick = false;
+                    track.classList.add("dragging");
+                });
+
+                window.addEventListener("pointermove", (event) => {
+                    if (!isPointerDown) {
+                        return;
+                    }
+                    if (event.pointerId !== activePointerId) {
+                        return;
+                    }
+
+                    const deltaX = event.clientX - startX;
+                    dragDistance = Math.max(dragDistance, Math.abs(deltaX));
+                    track.scrollLeft = startScrollLeft - deltaX;
+
+                    if (dragDistance > 6) {
+                        suppressClick = true;
+                        event.preventDefault();
+                    }
+                });
+
+                window.addEventListener("pointerup", (event) => {
+                    if (event.pointerId !== activePointerId) {
+                        return;
+                    }
+                    endDrag();
+                });
+
+                window.addEventListener("pointercancel", (event) => {
+                    if (event.pointerId !== activePointerId) {
+                        return;
+                    }
+                    endDrag();
+                });
+
+                track.addEventListener("dragstart", (event) => {
+                    event.preventDefault();
+                });
+
+                track.addEventListener(
+                    "click",
+                    (event) => {
+                        if (!suppressClick) {
+                            return;
+                        }
+                        event.preventDefault();
+                        event.stopPropagation();
+                        suppressClick = false;
+                    },
+                    true,
+                );
+            });
+        }
+
+        function setupSelectionCards() {
+            const interactiveSelector = "a, button, input, textarea, select, label";
+
+            const submitCardSelection = async (card) => {
+                const selectUrl = card.dataset.selectUrl;
+                if (!selectUrl) {
+                    return;
+                }
+
+                const selectMode = (card.dataset.selectMode || "").trim().toLowerCase();
+                if (selectMode === "async") {
+                    const response = await fetch(selectUrl, {
+                        method: "POST",
+                        headers: {
+                            "X-Requested-With": "XMLHttpRequest",
+                        },
+                    });
+
+                    const payload = await response.json();
+                    if (!response.ok || !payload.ok) {
+                        return;
+                    }
+
+                    const track = card.closest(".carousel-track");
+                    if (track) {
+                        track.querySelectorAll(".selection-card.selected").forEach((candidate) => {
+                            candidate.classList.remove("selected");
+                        });
+                    }
+                    card.classList.add("selected");
+                    return;
+                }
+
+                persistClosestTrackScroll(card);
+
+                const form = document.createElement("form");
+                form.method = "post";
+                form.action = selectUrl;
+                form.style.display = "none";
+                document.body.appendChild(form);
+                form.submit();
+            };
+
+            document.querySelectorAll(".selection-card[data-select-url]").forEach((card) => {
+                card.addEventListener("click", async (event) => {
+                    if (event.defaultPrevented) {
+                        return;
+                    }
+
+                    if (event.target.closest(interactiveSelector)) {
+                        return;
+                    }
+
+                    await submitCardSelection(card);
+                });
+
+                card.addEventListener("keydown", async (event) => {
+                    if (event.key !== "Enter" && event.key !== " ") {
+                        return;
+                    }
+
+                    if (event.target.closest(interactiveSelector)) {
+                        return;
+                    }
+
+                    event.preventDefault();
+                    await submitCardSelection(card);
+                });
+            });
+        }
+
         async function sendControl(action) {
             const response = await fetch("{{ url_for('api_control') }}", {
                 method: "POST",
@@ -287,7 +272,7 @@
             const banner = document.getElementById("status-banner");
 
             if (banner) {
-                banner.textContent = payload.ok ? `${payload.label} queued.` : payload.error || "Command failed.";
+                banner.textContent = payload.ok ? `${payload.label} zur Warteschlange hinzugefügt.` : payload.error || "Befehl fehlgeschlagen.";
                 banner.className = payload.ok ? "status" : "status error";
             }
 
@@ -295,10 +280,19 @@
                 window.setTimeout(() => window.location.reload(), 450);
             }
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setupPersistedCarouselScroll();
+            setupCarouselMouseDrag();
+            setupSelectionCards();
+        });
     </script>
     {% block head %}{% endblock %}
 </head>
 <body>
+    {% if back_url is defined and back_url %}
+    <a class="page-back button-link ghost" href="{{ back_url }}">Zurück</a>
+    {% endif %}
     <main class="page">
         {% block body %}{% endblock %}
     </main>

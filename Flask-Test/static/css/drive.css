@@ -1,0 +1,91 @@
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.top-actions form {
+    margin: 0;
+}
+
+.drive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.control-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.control-group {
+    display: grid;
+    gap: 12px;
+}
+
+.control-group h3 {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.control-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.control-panel button {
+    width: 100%;
+    min-height: 98px;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.direction-panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.direction-panel .forward {
+    grid-column: 1 / -1;
+    min-height: 114px;
+}
+
+.meta-list {
+    display: grid;
+    gap: 10px;
+}
+
+.log {
+    margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+    .top-actions {
+        justify-content: stretch;
+    }
+
+    .top-actions .button-link,
+    .top-actions button {
+        width: 100%;
+    }
+
+    .drive-grid,
+    .control-groups,
+    .direction-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .direction-panel .forward {
+        min-height: 104px;
+    }
+}

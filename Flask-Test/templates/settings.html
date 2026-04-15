@@ -1,55 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Launcher Settings{% endblock %}
+{% block title %}Launcher-Einstellungen{% endblock %}
 
 {% block head %}
-<style>
-    .settings-wrap {
-        margin-top: 18px;
-        display: grid;
-        gap: 18px;
-    }
-
-    .settings-form {
-        display: grid;
-        gap: 14px;
-    }
-
-    .settings-form label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 700;
-        color: #dfe8fb;
-    }
-
-    .settings-form input[type="text"] {
-        width: 100%;
-    }
-
-    .path-row {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .browse-button {
-        min-height: 48px;
-        white-space: nowrap;
-    }
-
-    .settings-note {
-        color: var(--muted);
-        margin-top: 8px;
-        font-size: 0.92rem;
-    }
-
-    @media (max-width: 780px) {
-        .path-row {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}">
 <script>
     async function browsePath(kind, inputId) {
         const input = document.getElementById(inputId);
@@ -70,12 +24,12 @@
             input.value = payload.path;
             if (banner) {
                 banner.className = "status";
-                banner.textContent = "Path selected.";
+                banner.textContent = "Pfad ausgewählt.";
             }
         } else {
             if (banner) {
                 banner.className = "status warning";
-                banner.textContent = payload.error || "No path selected.";
+                banner.textContent = payload.error || "Kein Pfad ausgewählt.";
             }
         }
     }
@@ -84,66 +38,56 @@
 
 {% block body %}
 <section class="hero">
-    <div class="eyebrow">Settings</div>
-    <h1>Configure launcher paths.</h1>
-    <p class="subtitle">Set the track folder, car folder, race.ini path, and game executable used by the launcher.</p>
+    <div class="eyebrow">Einstellungen</div>
+    <h1>Launcher-Pfade konfigurieren.</h1>
 </section>
-
-{% if message %}
-<div id="settings-banner" class="status {% if message_kind == 'warning' %}warning{% elif message_kind == 'error' %}error{% endif %}">
-    {{ message }}
-</div>
-{% else %}
-<div id="settings-banner" class="status">Use Browse to open a native file/folder picker on the server PC.</div>
-{% endif %}
 
 <section class="settings-wrap">
     <article class="card">
-        <h2>Paths</h2>
+        <h2>Pfade</h2>
         <form class="settings-form" method="post" action="{{ url_for('settings_save') }}">
             <div>
-                <label for="race_ini_path">race.ini path</label>
+                <label for="race_ini_path">race.ini-Pfad</label>
                 <div class="path-row">
                     <input type="text" id="race_ini_path" name="race_ini_path" value="{{ settings_values.race_ini_path }}" placeholder="C:/.../race.ini">
-                    <button class="browse-button secondary" type="button" onclick="browsePath('file', 'race_ini_path')">Select file</button>
+                    <button class="browse-button secondary" type="button" onclick="browsePath('file', 'race_ini_path')">Datei wählen</button>
                 </div>
             </div>
 
             <div>
-                <label for="tracks_root">Tracks folder</label>
+                <label for="tracks_root">Streckenordner</label>
                 <div class="path-row">
                     <input type="text" id="tracks_root" name="tracks_root" value="{{ settings_values.tracks_root }}" placeholder="C:/.../tracks">
-                    <button class="browse-button secondary" type="button" onclick="browsePath('folder', 'tracks_root')">Select folder</button>
+                    <button class="browse-button secondary" type="button" onclick="browsePath('folder', 'tracks_root')">Ordner wählen</button>
                 </div>
             </div>
 
             <div>
-                <label for="cars_root">Cars folder</label>
+                <label for="cars_root">Auto-Ordner</label>
                 <div class="path-row">
                     <input type="text" id="cars_root" name="cars_root" value="{{ settings_values.cars_root }}" placeholder="C:/.../cars">
-                    <button class="browse-button secondary" type="button" onclick="browsePath('folder', 'cars_root')">Select folder</button>
+                    <button class="browse-button secondary" type="button" onclick="browsePath('folder', 'cars_root')">Ordner wählen</button>
                 </div>
             </div>
 
             <div>
-                <label for="game_executable">Game executable</label>
+                <label for="game_executable">Spiel-EXE</label>
                 <div class="path-row">
                     <input type="text" id="game_executable" name="game_executable" value="{{ settings_values.game_executable }}" placeholder="C:/.../acs.exe">
-                    <button class="browse-button secondary" type="button" onclick="browsePath('file', 'game_executable')">Select file</button>
+                    <button class="browse-button secondary" type="button" onclick="browsePath('file', 'game_executable')">Datei wählen</button>
                 </div>
             </div>
 
             <div>
-                <label for="game_args">Game launch args</label>
+                <label for="game_args">Startargumente</label>
                 <input type="text" id="game_args" name="game_args" value="{{ settings_values.game_args }}" placeholder="--example value">
             </div>
 
             <div class="buttons">
-                <button type="submit">Save settings</button>
-                <a class="button-link secondary" href="{{ url_for('tracks_overview') }}">Back to tracks</a>
+                <button type="submit">Einstellungen speichern</button>
+                <a class="button-link secondary" href="{{ url_for('tracks_overview') }}">Zurück zu den Strecken</a>
             </div>
         </form>
-        <p class="settings-note">Dialogs open on the machine running this Flask server.</p>
     </article>
 </section>
 {% endblock %}

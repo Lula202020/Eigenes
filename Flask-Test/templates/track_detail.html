@@ -3,182 +3,63 @@
 {% block title %}{{ track.name }}{% endblock %}
 
 {% block head %}
-<style>
-    .media {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 18px;
-    }
-
-    .frame {
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        overflow: hidden;
-        background: rgba(2, 7, 16, 0.72);
-        height: clamp(220px, 34vw, 360px);
-    }
-
-    .frame img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: contain;
-        background: rgba(2, 7, 16, 0.72);
-    }
-
-    .frame.placeholder {
-        display: grid;
-        place-items: center;
-        color: var(--muted);
-        padding: 24px;
-        text-align: center;
-    }
-
-    .layout-card {
-        display: grid;
-        grid-template-columns: 320px minmax(0, 1fr);
-        gap: 16px;
-        width: min(88vw, 920px);
-    }
-
-    .layout-card .frame {
-        height: clamp(210px, 30vw, 320px);
-    }
-
-    .layout-shell {
-        margin-top: 18px;
-    }
-
-    .layout-track {
-        padding-bottom: 24px;
-    }
-
-    .meta-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px 12px;
-        font-size: 0.92rem;
-    }
-
-    .meta-grid span {
-        color: var(--muted);
-    }
-
-    @media (max-width: 900px) {
-        .media,
-        .layout-card,
-        .meta-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .layout-card {
-            width: min(90vw, 760px);
-        }
-
-        .frame,
-        .layout-card .frame {
-            height: clamp(180px, 50vw, 300px);
-        }
-    }
-</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/track_detail.css') }}">
 {% endblock %}
 
 {% block body %}
 <section class="hero">
-    <div class="eyebrow">Track details</div>
+    <div class="eyebrow">Streckendetails</div>
     <h1>{{ track.name }}</h1>
-    <p class="subtitle">
-        {{ track.description or 'No description available.' }}
-        {% if track.multi_layout %}
-        This track has multiple layouts, so you need to choose the exact layout before moving to the next step.
-        {% else %}
-        This track has one layout, so you can continue directly after selecting it.
-        {% endif %}
-    </p>
-</section>
-
-<section class="card">
-    <div class="pill-row">
-        <span class="pill">Folder: {{ track.folder_name }}</span>
-        <span class="pill">Layouts: {{ track.layout_count }}</span>
-        <span class="pill">{{ 'Multiple layouts' if track.multi_layout else 'Single layout' }}</span>
-    </div>
-    <div class="pill-row" style="margin-top: 12px;">
-        <span class="pill">Country: {{ track.country or 'Unknown' }}</span>
-        <span class="pill">City: {{ track.city or 'Unknown' }}</span>
-        <span class="pill">Length: {{ track.length or 'n/a' }}</span>
-        <span class="pill">Pit boxes: {{ track.pitboxes or 'n/a' }}</span>
-        <span class="pill">Run: {{ track.run or 'n/a' }}</span>
-    </div>
-</section>
-
-<section class="media">
-    <div class="frame {% if not track.preview_url %}placeholder{% endif %}">
-        {% if track.preview_url %}
-        <img src="{{ track.preview_url }}" alt="{{ track.name }} preview">
-        {% else %}
-        <span>No preview image found.</span>
-        {% endif %}
-    </div>
-    <div class="frame {% if not track.map_url %}placeholder{% endif %}">
-        {% if track.map_url %}
-        <img src="{{ track.map_url }}" alt="{{ track.name }} map">
-        {% else %}
-        <span>No map image found.</span>
-        {% endif %}
-    </div>
 </section>
 
 {% if track.multi_layout %}
-<div class="status warning" style="margin-top: 18px;">
-    This track contains {{ track.layout_count }} layouts. Choose one layout to continue.
+<div class="status warning layout-warning">
+    Diese Strecke enthält {{ track.layout_count }} Layouts. Wähle ein Layout, um fortzufahren.
 </div>
 {% endif %}
 
 <section class="carousel-shell layout-shell">
     <div class="carousel-track layout-track">
     {% for layout in track.layouts %}
-    <article class="card layout-card carousel-item">
-        <div class="frame {% if not layout.preview_url %}placeholder{% endif %}">
-            {% if layout.preview_url %}
-            <img src="{{ layout.preview_url }}" alt="{{ layout.name }} preview">
-            {% else %}
-            <span>No preview image found.</span>
-            {% endif %}
+    <article class="card layout-card carousel-item selection-card {% if selected_layout and selected_layout.layout_id == layout.layout_id %}selected{% endif %}" data-select-url="{{ url_for('select_layout', track_id=track.track_id, layout_id=layout.layout_id) }}" tabindex="0" role="button" aria-label="{{ layout.name }} auswählen">
+        <div class="layout-media">
+            <div class="frame {% if not layout.preview_url %}placeholder{% endif %}">
+                {% if layout.preview_url %}
+                <img src="{{ layout.preview_url }}" alt="{{ layout.name }} preview">
+                {% else %}
+                <span>No preview image found.</span>
+                {% endif %}
+            </div>
+            <div class="frame {% if not layout.map_url %}placeholder{% endif %}">
+                {% if layout.map_url %}
+                <img src="{{ layout.map_url }}" alt="{{ layout.name }} map">
+                {% else %}
+                <span>Kein map.png gefunden.</span>
+                {% endif %}
+            </div>
         </div>
 
         <div class="stack">
             <div class="pill-row">
-                <span class="pill">Layout: {{ layout.folder_name }}</span>
-                <span class="pill">{% if layout.is_default_layout %}Default layout{% else %}Specific layout{% endif %}</span>
+                <span class="pill">{% if layout.is_default_layout %}Standardlayout{% else %}Spezifisches Layout{% endif %}</span>
             </div>
             <h2>{{ layout.name }}</h2>
-            <p>{{ layout.description or 'No layout description available.' }}</p>
+            <p>{{ layout.description or 'Keine Layout-Beschreibung verfügbar.' }}</p>
             <div class="meta-grid">
-                <span>Country</span><strong>{{ layout.country or 'Unknown' }}</strong>
-                <span>City</span><strong>{{ layout.city or 'Unknown' }}</strong>
-                <span>Length</span><strong>{{ layout.length or 'n/a' }}</strong>
-                <span>Width</span><strong>{{ layout.width or 'n/a' }}</strong>
-                <span>Pit boxes</span><strong>{{ layout.pitboxes or 'n/a' }}</strong>
-                <span>Run</span><strong>{{ layout.run or 'n/a' }}</strong>
+                <span>Land</span><strong>{{ layout.country or 'Unbekannt' }}</strong>
+                <span>Stadt</span><strong>{{ layout.city or 'Unbekannt' }}</strong>
+                <span>Länge</span><strong>{{ layout.length or 'k. A.' }}</strong>
+                <span>Breite</span><strong>{{ layout.width or 'k. A.' }}</strong>
+                <span>Boxen</span><strong>{{ layout.pitboxes or 'k. A.' }}</strong>
+                <span>Variante</span><strong>{{ layout.run or 'k. A.' }}</strong>
             </div>
 
             {% if layout.author %}
-            <div class="meta">Author: {{ layout.author }}</div>
+            <div class="meta">Autor: {{ layout.author }}</div>
             {% endif %}
-
-            <form method="post" action="{{ url_for('select_layout', track_id=track.track_id, layout_id=layout.layout_id) }}">
-                <div class="buttons">
-                    <button type="submit">{% if track.multi_layout %}Select layout{% else %}Continue with this track{% endif %}</button>
-                    <a class="button-link secondary" href="{{ url_for('tracks_overview') }}">Back to tracks</a>
-                </div>
-            </form>
         </div>
     </article>
     {% endfor %}
 </div>
 </section>
-
-<div class="carousel-hint">Swipe sideways to browse layouts. Tap a layout to continue.</div>
 {% endblock %}

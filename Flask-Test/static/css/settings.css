@@ -1,0 +1,45 @@
+.settings-wrap {
+    margin-top: 18px;
+    display: grid;
+    gap: 18px;
+}
+
+.settings-form {
+    display: grid;
+    gap: 14px;
+}
+
+.settings-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #dfe8fb;
+}
+
+.settings-form input[type="text"] {
+    width: 100%;
+}
+
+.path-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.browse-button {
+    min-height: 48px;
+    white-space: nowrap;
+}
+
+.settings-note {
+    color: var(--muted);
+    margin-top: 8px;
+    font-size: 0.92rem;
+}
+
+@media (max-width: 780px) {
+    .path-row {
+        grid-template-columns: 1fr;
+    }
+}
