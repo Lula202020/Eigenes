@@ -21,7 +21,7 @@
 <section class="carousel-shell layout-shell">
     <div class="carousel-track layout-track">
     {% for layout in track.layouts %}
-    <article class="card layout-card carousel-item selection-card {% if selected_layout and selected_layout.layout_id == layout.layout_id %}selected{% endif %}" data-select-url="{{ url_for('select_layout', track_id=track.track_id, layout_id=layout.layout_id) }}" tabindex="0" role="button" aria-label="{{ layout.name }} auswählen">
+    <article class="card layout-card carousel-item selection-card" data-select-url="{{ url_for('select_layout', track_id=track.track_id, layout_id=layout.layout_id) }}" tabindex="0" role="button" aria-label="{{ layout.name }} auswählen">
         <div class="layout-media">
             <div class="frame {% if not layout.preview_url %}placeholder{% endif %}">
                 {% if layout.preview_url %}
@@ -40,9 +40,6 @@
         </div>
 
         <div class="stack">
-            <div class="pill-row">
-                <span class="pill">{% if layout.is_default_layout %}Standardlayout{% else %}Spezifisches Layout{% endif %}</span>
-            </div>
             <h2>{{ layout.name }}</h2>
             <p>{{ layout.description or 'Keine Layout-Beschreibung verfügbar.' }}</p>
             <div class="meta-grid">

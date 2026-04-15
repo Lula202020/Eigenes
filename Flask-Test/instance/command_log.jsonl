@@ -127,3 +127,27 @@
 {"timestamp": "2026-04-15T06:08:25+00:00", "action": "launch", "details": {"track_id": "heikki_oschersleben", "layout_id": "layout_3", "car_id": "audi_90_gto_s1", "success": false, "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"}}
 {"timestamp": "2026-04-15T06:08:25+00:00", "action": "control", "details": {"action": "shift_up"}}
 {"timestamp": "2026-04-15T06:08:26+00:00", "action": "launch", "details": {"track_id": "heikki_oschersleben", "layout_id": "layout_3", "car_id": "audi_90_gto_s1", "success": false, "message": "Spielstart fehlgeschlagen: cd \"C:\\Users\\Fahrsimulator\\Desktop\\AC_PRO 19\" && pm2 start acs_pro.exe --name Game (Exit-Code 1)"}}
+{"timestamp": "2026-04-15T06:11:29+00:00", "action": "stop_game", "details": {"mode": "pm2", "result": 1}}
+{"timestamp": "2026-04-15T06:37:54+00:00", "action": "select_layout", "details": {"track_id": "heikki_oschersleben", "layout_id": "layout_1", "layout_config": "layout_1", "track_name": "Oschersleben 2023 Grand Prix", "layout_name": "Oschersleben 2023 Grand Prix"}}
+{"timestamp": "2026-04-15T06:38:01+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:38:03+00:00", "action": "select_car", "details": {"car_id": "audi_90_gto", "car_name": "audi 90 gto", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:38:04+00:00", "action": "select_car", "details": {"car_id": "audi_90_gto_s1", "car_name": "audi 90 gto s1", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:38:04+00:00", "action": "select_car", "details": {"car_id": "audi_90_gto", "car_name": "audi 90 gto", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:38:08+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:38:10+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:38:11+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:39:49+00:00", "action": "select_layout", "details": {"track_id": "heikki_oschersleben", "layout_id": "layout_1", "layout_config": "layout_1", "track_name": "Oschersleben 2023 Grand Prix", "layout_name": "Oschersleben 2023 Grand Prix"}}
+{"timestamp": "2026-04-15T06:39:52+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "heikki_oschersleben", "layout_id": "layout_1"}}
+{"timestamp": "2026-04-15T06:50:51+00:00", "action": "select_layout", "details": {"track_id": "greatbritain", "layout_id": "default", "layout_config": "", "track_name": "Great Britain", "layout_name": "Great Britain"}}
+{"timestamp": "2026-04-15T06:50:52+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:53+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:53+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:53+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:53+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:54+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:54+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:55+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:55+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:55+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:56+00:00", "action": "select_car", "details": {"car_id": "al_rs6_avant_widebody", "car_name": "al rs6 avant widebody", "track_id": "greatbritain", "layout_id": "default"}}
+{"timestamp": "2026-04-15T06:50:57+00:00", "action": "select_car", "details": {"car_id": "800hp_rs2", "car_name": "800hp rs2", "track_id": "greatbritain", "layout_id": "default"}}

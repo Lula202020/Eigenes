@@ -269,7 +269,7 @@ def build_layout_entry(track_dir: Path, layout_dir: Path | None) -> dict:
     else:
         json_path = layout_dir / "ui_track.json"
         preview_path = layout_dir / "preview.png"
-        map_candidates = [layout_dir / "map.png", layout_dir / "outline.png"]
+        map_candidates = [track_dir / layout_dir.name / "map.png", layout_dir / "outline.png"]
         layout_id = layout_dir.name
         config_track = layout_dir.name
         is_default_layout = False
@@ -707,7 +707,7 @@ def settings_page():
 @app.post("/settings")
 def settings_save():
     save_launcher_config_from_form(request.form)
-    return redirect(url_for("settings_page", message="Einstellungen gespeichert.", kind="success"))
+    return redirect(url_for("tracks_overview"))
 
 
 @app.post("/api/dialog")

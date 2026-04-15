@@ -38,11 +38,6 @@
             </div>
 
             <div class="summary">
-                <div class="pill-row">
-                    <span class="pill">{{ track.folder_name }}</span>
-                    <span class="pill">{{ track.layout_count }} Layout{% if track.layout_count != 1 %}s{% endif %}</span>
-                    <span class="pill">{% if track.multi_layout %}mehrere Layouts{% else %}ein Layout{% endif %}</span>
-                </div>
                 <h2>{{ track.name }}</h2>
                 <p>{{ track.description or 'Keine Beschreibung verfügbar.' }}</p>
                 <div class="meta-grid">
@@ -50,6 +45,7 @@
                     <span>Stadt</span><strong>{{ track.city or 'Unbekannt' }}</strong>
                     <span>Länge</span><strong>{{ track.length or 'k. A.' }}</strong>
                     <span>Boxen</span><strong>{{ track.pitboxes or 'k. A.' }}</strong>
+                    <span>Layouts</span><strong>{{ track.layout_count }}</strong>
                 </div>
             </div>
         </a>
