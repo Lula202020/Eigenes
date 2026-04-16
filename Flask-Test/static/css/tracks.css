@@ -7,7 +7,7 @@
 
 .catalog-card {
     display: grid;
-    gap: 14px;
+    gap: 10px;
     height: 100%;
     width: min(88vw, 440px);
 }
@@ -16,14 +16,14 @@
     color: inherit;
     text-decoration: none;
     display: grid;
-    gap: 14px;
+    gap: 10px;
     height: 100%;
 }
 
 .media {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 10px;
 }
 
 .frame {
@@ -31,7 +31,7 @@
     border: 1px solid rgba(31, 56, 92, 0.16);
     overflow: hidden;
     background: rgba(236, 243, 250, 0.92);
-    height: clamp(170px, 26vw, 240px);
+    height: clamp(150px, 22vw, 210px);
 }
 
 .frame img {
@@ -51,26 +51,35 @@
 }
 
 .thumb {
-    height: clamp(165px, 24vw, 220px);
+    height: clamp(145px, 21vw, 200px);
 }
 
 .summary {
     display: grid;
-    gap: 10px;
+    gap: 4px;
+}
+
+.summary h2 {
+    margin: 0;
+}
+
+.summary p {
+    margin: 0;
 }
 
 .catalog-shell {
-    margin-top: 18px;
+    margin-top: 14px;
 }
 
 .catalog-track {
-    padding-bottom: 24px;
+    padding-bottom: 18px;
 }
 
 .meta-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px 12px;
+    gap: 6px 10px;
+    margin-top: 15px;
     font-size: 0.92rem;
 }
 
@@ -99,6 +108,6 @@
 
     .frame,
     .thumb {
-        height: clamp(150px, 46vw, 220px);
+        height: clamp(135px, 42vw, 190px);
     }
 }
