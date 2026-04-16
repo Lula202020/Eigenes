@@ -33,8 +33,11 @@
                 if (Number.isFinite(savedValue) && savedValue >= 0) {
                     // Apply on next frame so widths are measured and scroll bounds are valid.
                     window.requestAnimationFrame(() => {
+                        const previousBehavior = track.style.scrollBehavior;
+                        track.style.scrollBehavior = "auto";
                         const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
                         track.scrollLeft = Math.min(maxLeft, savedValue);
+                        track.style.scrollBehavior = previousBehavior;
                     });
                 }
 

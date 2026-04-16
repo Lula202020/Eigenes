@@ -16,7 +16,7 @@
 </section>
 
 <section class="carousel-shell catalog-shell">
-    <div class="carousel-track catalog-track">
+    <div class="carousel-track catalog-track" data-persist-key="tracks-catalog">
     {% for track in tracks %}
     <article class="card catalog-card carousel-item">
         <a class="track-link" href="{{ url_for('track_detail', track_id=track.track_id) }}">

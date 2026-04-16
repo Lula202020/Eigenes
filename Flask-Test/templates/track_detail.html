@@ -13,7 +13,7 @@
 </section>
 
 <section class="carousel-shell layout-shell">
-    <div class="carousel-track layout-track">
+    <div class="carousel-track layout-track" data-persist-key="layouts-{{ track.track_id }}">
     {% for layout in track.layouts %}
     <article class="card layout-card carousel-item selection-card" data-select-url="{{ url_for('select_layout', track_id=track.track_id, layout_id=layout.layout_id) }}" tabindex="0" role="button" aria-label="{{ layout.name }} auswählen">
         <div class="layout-media">
