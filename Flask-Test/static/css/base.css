@@ -32,6 +32,7 @@ html, body {
 body {
     padding: 24px;
     transform: rotate(180deg);
+    min-height: 100dvh;
 }
 
 .page-back {
