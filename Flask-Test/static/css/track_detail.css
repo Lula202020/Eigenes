@@ -1,8 +1,8 @@
 .media {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 18px;
+    gap: 10px;
+    margin-top: 14px;
 }
 
 .frame {
@@ -10,7 +10,7 @@
     border: 1px solid rgba(31, 56, 92, 0.16);
     overflow: hidden;
     background: rgba(236, 243, 250, 0.92);
-    height: clamp(220px, 34vw, 360px);
+    height: clamp(210px, 32vw, 330px);
 }
 
 .frame img {
@@ -32,26 +32,26 @@
 .layout-card {
     display: grid;
     grid-template-columns: 320px minmax(0, 1fr);
-    gap: 16px;
+    gap: 10px;
     width: min(88vw, 920px);
 }
 
 .layout-media {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 8px;
 }
 
 .layout-card .frame {
-    height: clamp(140px, 16vw, 180px);
+    height: clamp(126px, 14vw, 160px);
 }
 
 .layout-shell {
-    margin-top: 18px;
+    margin-top: 12px;
 }
 
 .layout-track {
-    padding-bottom: 24px;
+    padding-bottom: 14px;
 }
 
 .layout-warning {
@@ -61,8 +61,14 @@
 .meta-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px 12px;
+    gap: 4px 10px;
+    margin-top: 2px;
     font-size: 0.92rem;
+}
+
+.layout-card h2,
+.layout-card p {
+    margin: 0;
 }
 
 .meta-grid span {
