@@ -12,12 +12,6 @@
     <h1>{{ track.name }}</h1>
 </section>
 
-{% if track.multi_layout %}
-<div class="status warning layout-warning">
-    Diese Strecke enthält {{ track.layout_count }} Layouts. Wähle ein Layout, um fortzufahren.
-</div>
-{% endif %}
-
 <section class="carousel-shell layout-shell">
     <div class="carousel-track layout-track">
     {% for layout in track.layouts %}

@@ -57,56 +57,6 @@
 
                 const hasOverflow = () => track.scrollWidth - track.clientWidth > 2;
 
-                const settleToNearestCard = () => {
-                    const cards = Array.from(track.querySelectorAll(".carousel-item"));
-                    if (!cards.length || !hasOverflow()) {
-                        return;
-                    }
-
-                    const currentLeft = track.scrollLeft;
-                    const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
-                    const endThreshold = Math.max(80, Math.floor(track.clientWidth * 0.18));
-
-                    if (maxLeft - currentLeft <= endThreshold) {
-                        const reduceMotionNearEnd = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-                        track.scrollTo({
-                            left: maxLeft,
-                            behavior: reduceMotionNearEnd ? "auto" : "smooth",
-                        });
-                        return;
-                    }
-
-                    const trackRect = track.getBoundingClientRect();
-                    let nearestLeft = currentLeft;
-                    let nearestDistance = Number.POSITIVE_INFINITY;
-
-                    cards.forEach((card, index) => {
-                        const cardRect = card.getBoundingClientRect();
-                        const candidateLeft = currentLeft + (cardRect.left - trackRect.left);
-                        const distance = Math.abs(candidateLeft - currentLeft);
-                        if (distance < nearestDistance) {
-                            nearestDistance = distance;
-                            nearestLeft = candidateLeft;
-                        }
-
-                        if (index === cards.length - 1) {
-                            const endDistance = Math.abs(maxLeft - currentLeft);
-                            if (endDistance < nearestDistance) {
-                                nearestDistance = endDistance;
-                                nearestLeft = maxLeft;
-                            }
-                        }
-                    });
-
-                    const targetLeft = Math.min(maxLeft, Math.max(0, nearestLeft));
-                    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-                    track.scrollTo({
-                        left: targetLeft,
-                        behavior: reduceMotion ? "auto" : "smooth",
-                    });
-                };
-
                 const endDrag = () => {
                     if (!isPointerDown) {
                         return;
@@ -115,9 +65,6 @@
                     isPointerDown = false;
                     track.classList.remove("dragging");
                     activePointerId = null;
-
-                    // Smoothly settle to the nearest card instead of hard snapping.
-                    settleToNearestCard();
                 };
 
                 track.addEventListener("pointerdown", (event) => {
@@ -290,10 +237,13 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    {% if back_url is defined and back_url %}
-    <a class="page-back button-link ghost" href="{{ back_url }}">Zurück</a>
-    {% endif %}
     <main class="page">
+        {% if back_url is defined and back_url %}
+        <div class="page-back-row">
+            <a class="page-back button-link ghost" href="{{ back_url }}">Zurück</a>
+            {% block top_row_actions %}{% endblock %}
+        </div>
+        {% endif %}
         {% block body %}{% endblock %}
     </main>
 </body>

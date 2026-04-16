@@ -6,15 +6,17 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/cars.css') }}">
 {% endblock %}
 
-{% block body %}
+{% block top_row_actions %}
 {% if selected_car_entry %}
-<div class="top-actions">
+<div class="page-top-actions">
     <form method="post" action="{{ url_for('start_game') }}">
         <button type="submit">Spiel starten</button>
     </form>
 </div>
 {% endif %}
+{% endblock %}
 
+{% block body %}
 <section class="hero">
     <div class="eyebrow">Autowahl</div>
 </section>

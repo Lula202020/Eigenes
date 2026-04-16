@@ -44,8 +44,26 @@
 
 <section class="settings-wrap">
     <article class="card">
-        <h2>Pfade</h2>
+        <h2>Einstellungen</h2>
+        {% if message %}
+        <p id="settings-banner" class="status {{ 'error' if message_kind == 'error' else 'warning' if message_kind == 'warning' else '' }}">{{ message }}</p>
+        {% else %}
+        <p id="settings-banner" class="status" style="display:none;"></p>
+        {% endif %}
+
+        {% if settings_locked %}
+        <form class="settings-form" method="post" action="{{ url_for('settings_unlock') }}">
+            <div>
+                <label for="settings_password">Passwort</label>
+                <input type="password" id="settings_password" name="settings_password" autocomplete="current-password" required>
+            </div>
+            <div class="buttons">
+                <button type="submit">Einstellungen entsperren</button>
+            </div>
+        </form>
+        {% else %}
         <form class="settings-form" method="post" action="{{ url_for('settings_save') }}">
+            <input type="hidden" name="settings_password" value="{{ settings_password_value }}">
             <div>
                 <label for="race_ini_path">race.ini-Pfad</label>
                 <div class="path-row">
@@ -87,6 +105,7 @@
                 <button type="submit">Einstellungen speichern</button>
             </div>
         </form>
+        {% endif %}
     </article>
 </section>
 {% endblock %}

@@ -1,26 +1,51 @@
-.top-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-bottom: 10px;
-}
-
-.top-actions form {
-    margin: 0;
-}
-
 .car-shell {
     margin-top: 18px;
 }
 
 .car-track {
-    padding-bottom: 24px;
+    padding: 16px 20px 40px;
 }
 
 .car-card {
     width: min(88vw, 520px);
     display: grid;
     gap: 14px;
+    position: relative;
+    transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+}
+
+.car-card.selected {
+    transform: translateY(-3px) scale(1.01);
+    border-color: rgba(57, 208, 185, 0.98);
+    box-shadow:
+        0 0 0 2px rgba(57, 208, 185, 0.5),
+        0 18px 52px rgba(57, 208, 185, 0.22),
+        0 36px 90px rgba(31, 56, 92, 0.16);
+}
+
+.car-card.selected::after {
+    content: "Ausgewählt";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #083029;
+    background: linear-gradient(135deg, #8df7e7, #38d2ba);
+    box-shadow: 0 8px 20px rgba(21, 120, 106, 0.3);
+}
+
+.car-card.selected .car-preview,
+.car-card.selected .brand-logo {
+    border-color: rgba(57, 208, 185, 0.75);
+    box-shadow: 0 0 0 2px rgba(57, 208, 185, 0.2);
+}
+
+.car-card.selected .car-name {
+    color: #11695d;
 }
 
 .car-media {
@@ -91,20 +116,6 @@
 }
 
 @media (max-width: 780px) {
-    .top-actions {
-        justify-content: stretch;
-    }
-
-    .top-actions form,
-    .top-actions .button-link {
-        width: 100%;
-    }
-
-    .top-actions button,
-    .top-actions .button-link {
-        width: 100%;
-    }
-
     .car-card {
         width: min(90vw, 460px);
     }

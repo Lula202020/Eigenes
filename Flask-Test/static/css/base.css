@@ -34,10 +34,25 @@ body {
 }
 
 .page-back {
-    position: fixed;
-    top: 18px;
-    left: 18px;
-    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+}
+
+.page-back-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.page-top-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.page-top-actions form {
+    margin: 0;
 }
 
 .page {
@@ -88,8 +103,6 @@ h1 {
     gap: 18px;
     overflow-x: auto;
     padding: 4px 2px 18px;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 18px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -101,7 +114,6 @@ h1 {
 
 .carousel-track.dragging {
     cursor: grabbing;
-    scroll-snap-type: none;
     scroll-behavior: auto;
 }
 
@@ -117,11 +129,6 @@ h1 {
 
 .carousel-item {
     flex: 0 0 auto;
-    scroll-snap-align: start;
-}
-
-.carousel-item:last-child {
-    scroll-snap-align: end;
 }
 
 .selection-card {
@@ -184,6 +191,7 @@ label {
 }
 
 input[type="text"],
+input[type="password"],
 select,
 textarea {
     width: 100%;
@@ -196,6 +204,7 @@ textarea {
 }
 
 input[type="text"]:focus,
+input[type="password"]:focus,
 select:focus,
 textarea:focus {
     border-color: rgba(57, 208, 185, 0.75);
@@ -307,8 +316,4 @@ button.ghost,
         padding: 16px;
     }
 
-    .page-back {
-        top: 12px;
-        left: 12px;
-    }
 }

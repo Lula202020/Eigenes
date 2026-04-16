@@ -11,16 +11,12 @@
     <form method="post" action="{{ url_for('stop_game') }}">
         <button type="submit" class="secondary">Spiel beenden</button>
     </form>
-    <a class="button-link ghost" href="{{ url_for('tracks_overview') }}">Streckenauswahl</a>
 </div>
 
 <section class="hero">
     <div class="eyebrow">Fahrmodus</div>
 </section>
 
-<div id="status-banner" class="status {% if message_kind == 'warning' %}warning{% elif message_kind == 'error' %}error{% endif %}">
-    {{ message or 'Bereit.' }}
-</div>
 <section class="drive-grid">
     <article class="card">
         <h2>Steuerung</h2>
@@ -30,15 +26,6 @@
                 <div class="control-panel">
                     <button type="button" onclick="sendControl('shift_up')">Hochschalten</button>
                     <button type="button" onclick="sendControl('shift_down')">Runterschalten</button>
-                </div>
-            </div>
-
-            <div class="control-group">
-                <h3>Richtung</h3>
-                <div class="direction-panel">
-                    <button type="button" class="forward" onclick="sendControl('forward')">Vorwärts</button>
-                    <button type="button" class="secondary" onclick="sendControl('neutral')">Neutral</button>
-                    <button type="button" class="secondary" onclick="sendControl('reverse')">Rückwärts</button>
                 </div>
             </div>
         </div>

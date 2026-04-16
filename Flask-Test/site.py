@@ -4,6 +4,7 @@ import json
 import os
 import shlex
 import subprocess
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -12,6 +13,7 @@ from typing import Iterable
 from flask import Flask, abort, jsonify, redirect, render_template, request, send_from_directory, url_for
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = os.environ.get("FLASK_SECRET_KEY") or "assetto-launcher-dev-key"
 
 BASE_DIR = Path(__file__).resolve().parent
 INSTANCE_DIR = BASE_DIR / "instance"
@@ -25,9 +27,11 @@ ACTIVE_GAME_FILE = INSTANCE_DIR / "active_game.json"
 AVAILABLE_ACTIONS = {
     "shift_up": "Hochschalten",
     "shift_down": "Runterschalten",
-    "reverse": "Rückwärts",
-    "neutral": "Neutral",
-    "forward": "Vorwärts",
+}
+
+CONTROL_ACTION_KEYS = {
+    "shift_up": "X",
+    "shift_down": "Y",
 }
 
 
@@ -144,11 +148,18 @@ def pm2_game_is_available() -> bool:
     return result.returncode == 0
 
 
-def settings_template_context(message: str = "", message_kind: str = "info") -> dict:
+def settings_template_context(
+    message: str = "",
+    message_kind: str = "info",
+    settings_locked: bool = False,
+    settings_password_value: str = "",
+) -> dict:
     settings = load_settings()
     return {
         "message": message,
         "message_kind": message_kind,
+        "settings_locked": settings_locked,
+        "settings_password_value": settings_password_value,
         "settings_values": {
             "race_ini_path": str(settings.race_ini_path),
             "tracks_root": str(settings.tracks_root),
@@ -157,6 +168,10 @@ def settings_template_context(message: str = "", message_kind: str = "info") -> 
             "game_args": " ".join(settings.game_args),
         },
     }
+
+
+def settings_access_password() -> str:
+    return (os.environ.get("ASSETTO_SETTINGS_PASSWORD") or "assetto").strip()
 
 
 def open_system_dialog(kind: str, initial_path: str = "") -> tuple[bool, str]:
@@ -202,6 +217,32 @@ def open_system_dialog(kind: str, initial_path: str = "") -> tuple[bool, str]:
         return False, "Keine Auswahl getroffen."
 
     return True, selected
+
+
+def send_server_keypress(key_char: str) -> tuple[bool, str]:
+    if os.name != "nt":
+        return False, "Tastatursteuerung ist nur unter Windows verfügbar."
+
+    key_upper = (key_char or "").strip().upper()
+    virtual_keys = {
+        "X": 0x58,
+        "Y": 0x59,
+    }
+    virtual_key = virtual_keys.get(key_upper)
+    if virtual_key is None:
+        return False, "Nicht unterstützte Taste."
+
+    try:
+        import ctypes
+
+        key_event = ctypes.windll.user32.keybd_event
+        key_event(virtual_key, 0, 0, 0)
+        time.sleep(0.015)
+        key_event(virtual_key, 0, 0x0002, 0)
+    except Exception as exc:
+        return False, f"Tasteneingabe fehlgeschlagen: {exc}"
+
+    return True, ""
 
 
 def read_race_ini(path: Path) -> str:
@@ -697,15 +738,39 @@ def tracks_overview():
 def settings_page():
     message = (request.args.get("message") or "").strip()
     message_kind = (request.args.get("kind") or "info").strip() or "info"
+    if not message:
+        message = "Passwort eingeben, um Einstellungen zu öffnen."
+        message_kind = "warning"
     return render_template(
         "settings.html",
-        **settings_template_context(message=message, message_kind=message_kind),
+        **settings_template_context(message=message, message_kind=message_kind, settings_locked=True),
+        back_url=url_for("tracks_overview"),
+    )
+
+
+@app.post("/settings/unlock")
+def settings_unlock():
+    submitted_password = (request.form.get("settings_password") or "").strip()
+    if submitted_password != settings_access_password():
+        return redirect(url_for("settings_page", message="Falsches Passwort.", kind="error"))
+
+    return render_template(
+        "settings.html",
+        **settings_template_context(
+            message="Einstellungen freigeschaltet.",
+            message_kind="success",
+            settings_locked=False,
+            settings_password_value=submitted_password,
+        ),
         back_url=url_for("tracks_overview"),
     )
 
 
 @app.post("/settings")
 def settings_save():
+    submitted_password = (request.form.get("settings_password") or "").strip()
+    if submitted_password != settings_access_password():
+        return redirect(url_for("settings_page", message="Kein Zugriff auf Einstellungen.", kind="error"))
     save_launcher_config_from_form(request.form)
     return redirect(url_for("tracks_overview"))
 
@@ -791,11 +856,8 @@ def start_game():
         },
     )
 
-    drive_context = build_browser_context(
-        message=launch_message,
-        message_kind="success" if launched else "warning",
-    )
-    return render_template("drive.html", **drive_context, available_actions=AVAILABLE_ACTIONS)
+    launch_kind = "success" if launched else "warning"
+    return redirect(url_for("drive_page", message=launch_message, kind=launch_kind))
 
 
 @app.post("/stop-game")
@@ -812,14 +874,15 @@ def stop_game():
 
 @app.get("/drive")
 def drive_page():
-    context = build_browser_context(message="Fahrsteuerung bereit.", message_kind="info")
+    message = (request.args.get("message") or "").strip() or "Fahrsteuerung bereit."
+    message_kind = (request.args.get("kind") or "info").strip() or "info"
+    context = build_browser_context(message=message, message_kind=message_kind)
     if not has_full_selection(context):
         return redirect(url_for("cars_placeholder"))
     return render_template(
         "drive.html",
         **context,
         available_actions=AVAILABLE_ACTIONS,
-        back_url=url_for("cars_placeholder"),
     )
 
 
@@ -915,7 +978,15 @@ def api_control():
     if action not in AVAILABLE_ACTIONS:
         return jsonify({"ok": False, "error": "Unbekannte Aktion."}), 400
 
-    append_command_log("control", {"action": action})
+    target_key = CONTROL_ACTION_KEYS[action]
+    ok, error_message = send_server_keypress(target_key)
+    append_command_log(
+        "control",
+        {"action": action, "key": target_key, "success": ok, "error": error_message if not ok else ""},
+    )
+    if not ok:
+        return jsonify({"ok": False, "error": error_message}), 500
+
     return jsonify({"ok": True, "action": action, "label": AVAILABLE_ACTIONS[action], "timestamp": utc_now()})
 
 
